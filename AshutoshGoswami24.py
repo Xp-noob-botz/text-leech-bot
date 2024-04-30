@@ -332,8 +332,7 @@ async def account_login(bot: Client, m: Message):
 @bot.on_message(~filters.user(AUTH_USERS))
 async def unauthorized_user(bot, message):
     sorry_message = (
-        "Sorry, you are not authorized to use this command. "
-        "If you need assistance, click [here](https://example.com/help) to get in touch with us."
+        """If you need buy prime Pay And Send Screenshot<a href="https://t.me/AshuXRobot">Ashu Robot</a>"""
     )
     await message.reply_text(sorry_message, disable_web_page_preview=True)
 
