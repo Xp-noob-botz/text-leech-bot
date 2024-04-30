@@ -60,9 +60,8 @@ async def account_login(bot, m):
 async def donate_command_handler(client, m):
     buttons = [
         [
-           InlineKeyboardButton('💸𝗱𝗼𝗻𝗮𝘁𝗲 𝗳𝗼𝗿 𝗱𝗲𝘃𝗲𝗹𝗼𝗽𝗲𝗿𝘀💸', url='https://ashubotz.github.io/Pay/bot/txtdonet.html')
-        ],[
-             InlineKeyboardButton('💸Buy This Bot Only 5$💸', url='https://t.me/AshuSupport')
+           InlineKeyboardButton('💸𝗱𝗼𝗻𝗮𝘁𝗲💸', url='https://ashubotz.github.io/Pay/bot/txtdonet.html'),
+            InlineKeyboardButton('💸Buy Bot Only 5$💸', url='https://t.me/AshuSupport')
         ],[
           InlineKeyboardButton('📸📸ᴀғᴛᴇʀ ᴘᴀʏ ᴘʟᴢ sᴇɴᴅ sᴄʀᴇᴇɴsʜᴏᴛ ʜᴇʀᴇ🖼️🖼️', url='https://t.me/MovieXPrime_bot')
         ]
