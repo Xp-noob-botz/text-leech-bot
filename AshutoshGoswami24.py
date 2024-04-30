@@ -165,7 +165,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             parse_mode=enums.ParseMode.HTML
         )  
 
-        
+
 @bot.on_message(filters.command("stop"))
 async def restart_handler(_, m):
     await m.reply_text("**Stop Joine @AshutoshGoswami24 @PandaWep**", True)
@@ -352,6 +352,6 @@ async def unauthorized_user(bot, message):
 
 
 
-print("I Am Rady😁😁")
+print("I Am Rady🖖❌")
 
 bot.run()
