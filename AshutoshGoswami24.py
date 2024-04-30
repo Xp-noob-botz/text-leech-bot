@@ -63,7 +63,7 @@ async def donate_command_handler(client, m):
            InlineKeyboardButton('💸𝗱𝗼𝗻𝗮𝘁𝗲💸', url='https://ashubotz.github.io/Pay/bot/txtdonet.html'),
             InlineKeyboardButton('💸Buy Bot Only 5$💸', url='https://t.me/AshuSupport')
         ],[
-          InlineKeyboardButton('📸📸ᴀғᴛᴇʀ ᴘᴀʏ ᴘʟᴢ sᴇɴᴅ sᴄʀᴇᴇɴsʜᴏᴛ ʜᴇʀᴇ🖼️🖼️', url='https://t.me/MovieXPrime_bot')
+          InlineKeyboardButton('📸📸sᴇɴᴅ sᴄʀᴇᴇɴsʜᴏᴛ ʜᴇʀᴇ🖼️🖼️', url='https://t.me/MovieXPrime_bot')
         ]
     ]
     await client.send_photo(
