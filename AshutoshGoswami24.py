@@ -54,7 +54,7 @@ async def account_login(bot, m):
         reply_markup=reply_markup
     )
 
-@Client.on_message(filters.command("donate") & filters.private)
+@bot.on_message(filters.command("donate") & filters.private)
 async def donate_command_handler(client, m):
     buttons = [
         [
@@ -68,8 +68,7 @@ async def donate_command_handler(client, m):
         chat_id=m.chat.id,
         photo=random.choice(QRPICS),
         caption=DONATE_TXT,
-        reply_markup=InlineKeyboardMarkup(buttons),
-        parse_mode="HTML"
+        reply_markup=InlineKeyboardMarkup(buttons)
     )
 @bot.on_message(filters.command("stop"))
 async def restart_handler(_, m):
