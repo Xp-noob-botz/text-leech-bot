@@ -39,8 +39,10 @@ async def account_login(bot, m):
     reply_markup = InlineKeyboardMarkup(
         [
             [
-                InlineKeyboardButton("✜ 𝐉𝐨𝐢𝐧 𝐔𝐩𝐃𝐚𝐭𝐞 𝐂𝐡𝐚𝐧𝐧𝐞𝐥 ✜" ,url="https://t.me/PandaWep"),
-                InlineKeyboardButton("✜◆ 𝐂𝐨𝐧𝐭𝐚𝐜𝐭 ◆✜" ,url="https://t.me/AshuSupport"),
+                InlineKeyboardButton("✜ 𝐉𝐨𝐢𝐧 𝐔𝐩𝐃𝐚𝐭𝐞 𝐂𝐡𝐚𝐧𝐧𝐞𝐥 ✜" ,url="https://t.me/PandaWep")
+            ],[
+                InlineKeyboardButton("✜◆ 𝐂𝐨𝐧𝐭𝐚𝐜𝐭 ◆✜" ,url="https://t.me/AshuSupport")
+            ],[
                 InlineKeyboardButton("🦋 𝐃𝐞𝐯𝐥𝐨𝐩𝐞𝐫 🦋" ,url="https://t.me/AshutoshGoswami24")
             ]
         ]
@@ -58,10 +60,11 @@ async def account_login(bot, m):
 async def donate_command_handler(client, m):
     buttons = [
         [
-            InlineKeyboardButton('📸📸ᴀғᴛᴇʀ ᴘᴀʏ ᴘʟᴢ sᴇɴᴅ sᴄʀᴇᴇɴsʜᴏᴛ ʜᴇʀᴇ🖼️🖼️', url='https://t.me/MovieXPrime_bot')
-        ],
-        [
-            InlineKeyboardButton('🏠Hᴏᴍᴇ🏠', callback_data='start')
+           InlineKeyboardButton('💸𝗱𝗼𝗻𝗮𝘁𝗲 𝗳𝗼𝗿 𝗱𝗲𝘃𝗲𝗹𝗼𝗽𝗲𝗿𝘀💸', url='https://ashubotz.github.io/Pay/bot/txtdonet.html')
+        ],[
+             InlineKeyboardButton('💸Buy This Bot Only 5$💸', url='https://t.me/AshuSupport')
+        ],[
+          InlineKeyboardButton('📸📸ᴀғᴛᴇʀ ᴘᴀʏ ᴘʟᴢ sᴇɴᴅ sᴄʀᴇᴇɴsʜᴏᴛ ʜᴇʀᴇ🖼️🖼️', url='https://t.me/MovieXPrime_bot')
         ]
     ]
     await client.send_photo(
