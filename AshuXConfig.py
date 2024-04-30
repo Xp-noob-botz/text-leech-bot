@@ -11,8 +11,8 @@ SUDO_USERS = int(environ.get("SUDO_USERS", "6945082854"))
 bot_token = environ.get("bot_token", "")
 OWNER_ID = int(environ.get("OWNER_ID", "6945082854"))
 
-QRPICS = (environ.get('QRPICS', 'https://graph.org/file/b3125068739885e7109db.jpg https://graph.org/file/b3125068739885e7109db.jpg')).split()
-PICS = (environ.get('PICS', 'https://graph.org/file/e5dbfe43f501618000369.jpg https://graph.org/file/e5dbfe43f501618000369.jpg https://graph.org/file/e5dbfe43f501618000369.jpg')).split()
+QRPICS = (environ.get('QRPICS', 'https://graph.org/file/867866ae66f1d42413c71.jpg https://graph.org/file/867866ae66f1d42413c71.jpg')).split()
+PICS = (environ.get('PICS', 'https://graph.org/file/3148e0aa43073985fa9c0.jpg https://graph.org/file/3148e0aa43073985fa9c0.jpg')).split()
 START_TXT = """<b>Welcome to My Bot!</b>
 Send /upload Then Send Any Txt File Then Get File 
 If You Want To Buy Bot @AshuSupport
