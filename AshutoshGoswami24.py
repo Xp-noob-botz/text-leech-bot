@@ -14,47 +14,18 @@ from aiohttp import ClientSession
 from pyromod import listen
 from subprocess import getstatusoutput
 
-from pyrogram import Client, filters
-from pyrogram.types import Message
-from pyrogram.errors import FloodWait
-from pyrogram.errors.exceptions.bad_request_400 import StickerEmojiInvalid
-from pyrogram.types.messages_and_media import message
-from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
+from pyrogram import *
+
+from pyrogram.types import *
 import random
 
 
 
 bot = Client(
     "bot",
-    api_id=api_id,
-    api_hash=api_hash,
-    bot_token=bot_token)
-
-
-
-
-@bot.on_message(filters.command(["start"]))
-async def account_login(bot, m):
-    # Define your inline keyboard markup
-    reply_markup = InlineKeyboardMarkup(
-        [
-            [
-                InlineKeyboardButton("✜ 𝐉𝐨𝐢𝐧 𝐔𝐩𝐃𝐚𝐭𝐞 𝐂𝐡𝐚𝐧𝐧𝐞𝐥 ✜" ,url="https://t.me/PandaWep")
-            ],[
-                InlineKeyboardButton("✜◆ 𝐂𝐨𝐧𝐭𝐚𝐜𝐭 ◆✜" ,url="https://t.me/AshuSupport")
-            ],[
-                InlineKeyboardButton("🦋 𝐃𝐞𝐯𝐥𝐨𝐩𝐞𝐫 🦋" ,url="https://t.me/AshutoshGoswami24")
-            ]
-        ]
-    )
-    # Choose a random image
-    photo = random.choice(PICS)
-    # Send the photo with caption and inline keyboard markup
-    await m.reply_photo(
-        photo=photo,
-        caption=START_TXT,
-        reply_markup=reply_markup
-    )
+    api_id=API_ID,
+    api_hash=API_HASE,
+    bot_token=BOT_TOKEN)
 
 @bot.on_message(filters.command("donate") & filters.private)
 async def donate_command_handler(client, m):
@@ -63,7 +34,8 @@ async def donate_command_handler(client, m):
            InlineKeyboardButton('💸𝗱𝗼𝗻𝗮𝘁𝗲💸', url='https://ashubotz.github.io/Pay/bot/txtdonet.html'),
             InlineKeyboardButton('💸Buy Bot Only 5$💸', url='https://t.me/AshuSupport')
         ],[
-          InlineKeyboardButton('📸📸sᴇɴᴅ sᴄʀᴇᴇɴsʜᴏᴛ ʜᴇʀᴇ🖼️🖼️', url='https://t.me/MovieXPrime_bot')
+          InlineKeyboardButton('📸📸sᴇɴᴅ sᴄʀᴇᴇɴsʜᴏᴛ ʜᴇʀᴇ🖼️🖼️', url='https://t.me/MovieXPrime_bot'),
+          InlineKeyboardButton('🏠Hᴏᴍᴇ🏠', callback_data='start')
         ]
     ]
     await client.send_photo(
@@ -72,14 +44,124 @@ async def donate_command_handler(client, m):
         caption=DONATE_TXT,
         reply_markup=InlineKeyboardMarkup(buttons)
     )
+
+@bot.on_message(filters.command("start") & filters.incoming)
+async def start(client, message):
+        buttons = [[
+            InlineKeyboardButton('😁ʜᴏᴡ ᴛᴏ ᴜsᴇ', callback_data='use')
+        ],[
+            InlineKeyboardButton('🔍 sᴜᴘᴘᴏʀᴛ ɢʀᴏᴜᴘ', url='https://t.me/PandaWepChat'),
+            InlineKeyboardButton('🤖 ᴜᴘᴅᴀᴛᴇ ᴄʜᴀɴɴᴇʟ', url='https://t.me/pandawep'),
+            InlineKeyboardButton('😎 ᴏᴡɴ ʙᴏᴛ 😎', callback_data='own'),
+        ],[
+            InlineKeyboardButton('🧑‍💻ᴅᴇᴠᴇʟᴏᴘᴇʀ🧑‍💻', url='https://t.me/AshutoshGoswami24'),
+            InlineKeyboardButton('🧑‍💻ᴅᴇᴠ Sᴜᴘᴘᴏʀᴛ🧑‍💻', url='https://t.me/AshuSupport'),
+        ],[
+            InlineKeyboardButton('💸Bᴜʏ Pʀɪᴍᴇ Nᴏᴡ💸', callback_data='prime')
+        ]]
+        reply_markup = InlineKeyboardMarkup(buttons)
+        me2 = (await client.get_me()).mention
+        await message.reply_photo(
+            photo=random.choice(PICS),
+            caption=START_TXT.format(message.from_user.mention, me2),
+            reply_markup=reply_markup
+        )
+
+@bot.on_callback_query()
+async def cb_handler(client: Client, query: CallbackQuery):
+    if query.data == "close_data":
+        await query.message.delete()
+        
+    elif query.data == "start":
+        buttons = [[
+            InlineKeyboardButton('😁ʜᴏᴡ ᴛᴏ ᴜsᴇ😁', callback_data='use')
+        ],[
+            InlineKeyboardButton('🔍 sᴜᴘᴘᴏʀᴛ ɢʀᴏᴜᴘ', url='https://t.me/PandaWepChat'),
+            InlineKeyboardButton('🤖 ᴜᴘᴅᴀᴛᴇ ᴄʜᴀɴɴᴇʟ', url='https://t.me/pandawep'),
+            InlineKeyboardButton('😎 ᴏᴡɴ ʙᴏᴛ 😎', callback_data='own'),
+        ],[
+            InlineKeyboardButton('🧑‍💻ᴅᴇᴠᴇʟᴏᴘᴇʀ🧑‍💻', url='https://t.me/AshutoshGoswami24'),
+            InlineKeyboardButton('🧑‍💻ᴅᴇᴠ Sᴜᴘᴘᴏʀᴛ🧑‍💻', url='https://t.me/AshuSupport'),
+        ],[
+            InlineKeyboardButton('💸Bᴜʏ Pʀɪᴍᴇ Nᴏᴡ💸', callback_data='prime')
+        ]]
+        
+        reply_markup = InlineKeyboardMarkup(buttons)
+        await client.edit_message_media(
+            query.message.chat.id, 
+            query.message.id, 
+            InputMediaPhoto(random.choice(PICS))
+        )
+        me2 = (await client.get_me()).mention
+        await query.message.edit_text(
+            text=START_TXT.format(query.from_user.mention, me2, query.from_user.mention),
+            reply_markup=reply_markup,
+            parse_mode=enums.ParseMode.HTML
+        )
+
+    elif query.data == "use":
+        buttons = [[
+            InlineKeyboardButton('🏠Hᴏᴍᴇ🏠', callback_data='start')
+        ],[
+            InlineKeyboardButton('💸Bᴜʏ Bᴏᴛ Oɴʟʏ ₹𝟽𝟶💸', callback_data='prime')
+        ]]
+        await client.edit_message_media(
+            query.message.chat.id, 
+            query.message.id, 
+            InputMediaPhoto(random.choice(USE))
+        )
+        reply_markup = InlineKeyboardMarkup(buttons)
+        await query.message.edit_text(
+            text=USE_TXT.format(query.from_user.mention),
+            reply_markup=reply_markup,
+            parse_mode=enums.ParseMode.HTML
+        )          
+
+    elif query.data == "own":
+        buttons = [[
+            InlineKeyboardButton('🏠Hᴏᴍᴇ🏠', callback_data='start'),
+            InlineKeyboardButton('💸Bᴜʏ Pʀɪᴍᴇ Nᴏᴡ💸', callback_data='prime')
+        ]]
+        await client.edit_message_media(
+            query.message.chat.id, 
+            query.message.id, 
+            InputMediaPhoto(random.choice(QRPICS))
+        )
+        reply_markup = InlineKeyboardMarkup(buttons)
+        await query.message.edit_text(
+            text=OWN_TXT,
+            reply_markup=reply_markup,
+            parse_mode=enums.ParseMode.HTML
+        )  
+
+    elif query.data == "prime":
+        buttons = [[
+           InlineKeyboardButton('💸𝗱𝗼𝗻𝗮𝘁𝗲💸', url='https://ashubotz.github.io/Pay/bot/txtdonet.html'),
+            InlineKeyboardButton('💸Bᴜʏ Bᴏᴛ Oɴʟʏ ₹𝟽𝟶💸', callback_data='own')
+        ],[
+          InlineKeyboardButton('📸📸sᴇɴᴅ sᴄʀᴇᴇɴsʜᴏᴛ ʜᴇʀᴇ🖼️🖼️', url='https://t.me/MovieXPrime_bot'),
+          InlineKeyboardButton('🏠Hᴏᴍᴇ🏠', callback_data='start')
+        ]]
+        await client.edit_message_media(
+            query.message.chat.id, 
+            query.message.id, 
+            InputMediaPhoto(random.choice(QRPICS))
+        )
+        reply_markup = InlineKeyboardMarkup(buttons)
+        await query.message.edit_text(
+            text=PRIME_TXT,
+            reply_markup=reply_markup,
+            parse_mode=enums.ParseMode.HTML
+        )  
+
 @bot.on_message(filters.command("stop"))
 async def restart_handler(_, m):
     await m.reply_text("**Stop Joine @AshutoshGoswami24 @PandaWep**", True)
     os.execl(sys.executable, sys.executable, *sys.argv)
 
 
-
-@bot.on_message(filters.command(["upload"]))
+# Define your command handler for authenticated users
+@bot.on_message(filters.command(["upload"]) & filters.user(AUTH_USERS))
 async def account_login(bot: Client, m: Message):
     editable = await m.reply_text('𝐓𝐨 𝐃𝐨𝐰𝐧𝐥𝐨𝐚𝐝 𝐀 𝐓𝐱𝐭 𝐅𝐢𝐥𝐞 𝐒𝐞𝐧𝐝 𝐇𝐞𝐫𝐞 ⏍')
     input: Message = await bot.listen(editable.chat.id)
@@ -246,5 +328,17 @@ async def account_login(bot: Client, m: Message):
         await m.reply_text(e)
     await m.reply_text("𝐒𝐮𝐜𝐜𝐞𝐬𝐬𝐟𝐮𝐥𝐥𝐲 𝐃𝐨𝐧𝐞 @AshutoshGoswami24 @PandaWep\n\nPlz Donate For Devloper /donate")
 
+# Define your sorry message and help link for users who are not authenticated
+@bot.on_message(~filters.user(AUTH_USERS))
+async def unauthorized_user(bot, message):
+    sorry_message = (
+        "Sorry, you are not authorized to use this command. "
+        "If you need assistance, click [here](https://example.com/help) to get in touch with us."
+    )
+    await message.reply_text(sorry_message, disable_web_page_preview=True)
+
+
+
+print("I Am Rady😁😁")
 
 bot.run()
