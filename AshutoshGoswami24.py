@@ -38,8 +38,7 @@ async def donate_command_handler(client, m):
           InlineKeyboardButton('📸📸sᴇɴᴅ sᴄʀᴇᴇɴsʜᴏᴛ ʜᴇʀᴇ🖼️🖼️', url='https://t.me/MovieXPrime_bot')
         ],[
           InlineKeyboardButton('🏠Hᴏᴍᴇ🏠', callback_data='start')
-        ]
-    ]
+        ]]
     await client.send_photo(
         chat_id=m.chat.id,
         photo=random.choice(QRPICS),
@@ -164,9 +163,8 @@ async def cb_handler(client: Client, query: CallbackQuery):
             reply_markup=reply_markup,
             parse_mode=enums.ParseMode.HTML
         )  
-
-
-@bot.on_message(filters.command("stop"))
+#@bot.on_message(filters.command("stop"))
+@bot.on_message(filters.command(["stop"]) & filters.user(AUTH_USERS))
 async def restart_handler(_, m):
     await m.reply_text("**Stop Joine @AshutoshGoswami24 @PandaWep**", True)
     os.execl(sys.executable, sys.executable, *sys.argv)
@@ -345,7 +343,7 @@ async def account_login(bot: Client, m: Message):
 @bot.on_message(~filters.user(AUTH_USERS))
 async def unauthorized_user(bot, message):
     sorry_message = (
-       """If you need buy prime Pay And Send Screenshot<a href="https://t.me/AshuXRobot">Ashu Robot</a>"""
+
        """If you need buy prime Pay And Send Screenshot<a href="https://t.me/AshuXRobot">Ashu Robot</a>"""
     )
     await message.reply_text(sorry_message, disable_web_page_preview=True)
