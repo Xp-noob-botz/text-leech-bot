@@ -31,10 +31,12 @@ bot = Client(
 async def donate_command_handler(client, m):
     buttons = [
         [
-           InlineKeyboardButton('💸𝗱𝗼𝗻𝗮𝘁𝗲💸', url='https://ashubotz.github.io/Pay/bot/txtdonet.html'),
+           InlineKeyboardButton('💸𝗱𝗼𝗻𝗮𝘁𝗲💸', url='https://ashubotz.github.io/Pay/bot/txtdonet.html')
+        ],[
             InlineKeyboardButton('💸Buy Bot Only 5$💸', url='https://t.me/AshuSupport')
         ],[
-          InlineKeyboardButton('📸📸sᴇɴᴅ sᴄʀᴇᴇɴsʜᴏᴛ ʜᴇʀᴇ🖼️🖼️', url='https://t.me/MovieXPrime_bot'),
+          InlineKeyboardButton('📸📸sᴇɴᴅ sᴄʀᴇᴇɴsʜᴏᴛ ʜᴇʀᴇ🖼️🖼️', url='https://t.me/MovieXPrime_bot')
+        ],[
           InlineKeyboardButton('🏠Hᴏᴍᴇ🏠', callback_data='start')
         ]
     ]
@@ -48,14 +50,17 @@ async def donate_command_handler(client, m):
 @bot.on_message(filters.command("start") & filters.incoming)
 async def start(client, message):
         buttons = [[
-            InlineKeyboardButton('😁ʜᴏᴡ ᴛᴏ ᴜsᴇ', callback_data='use')
+            InlineKeyboardButton('😁ʜᴏᴡ ᴛᴏ ᴜsᴇ😁', callback_data='use')
         ],[
-            InlineKeyboardButton('🔍 sᴜᴘᴘᴏʀᴛ ɢʀᴏᴜᴘ', url='https://t.me/PandaWepChat'),
-            InlineKeyboardButton('🤖 ᴜᴘᴅᴀᴛᴇ ᴄʜᴀɴɴᴇʟ', url='https://t.me/pandawep'),
-            InlineKeyboardButton('😎 ᴏᴡɴ ʙᴏᴛ 😎', callback_data='own'),
+            InlineKeyboardButton('🔍 sᴜᴘᴘᴏʀᴛ ɢʀᴏᴜᴘ', url='https://t.me/PandaWepChat')
         ],[
-            InlineKeyboardButton('🧑‍💻ᴅᴇᴠᴇʟᴏᴘᴇʀ🧑‍💻', url='https://t.me/AshutoshGoswami24'),
-            InlineKeyboardButton('🧑‍💻ᴅᴇᴠ Sᴜᴘᴘᴏʀᴛ🧑‍💻', url='https://t.me/AshuSupport'),
+            InlineKeyboardButton('🤖 ᴜᴘᴅᴀᴛᴇ ᴄʜᴀɴɴᴇʟ', url='https://t.me/pandawep')
+        ],[
+            InlineKeyboardButton('😎 ᴏᴡɴ ʙᴏᴛ 😎', callback_data='own')
+        ],[
+            InlineKeyboardButton('🧑‍💻ᴅᴇᴠᴇʟᴏᴘᴇʀ🧑‍💻', url='https://t.me/AshutoshGoswami24')
+        ],[
+            InlineKeyboardButton('🧑‍💻ᴅᴇᴠ Sᴜᴘᴘᴏʀᴛ🧑‍💻', url='https://t.me/AshuSupport')
         ],[
             InlineKeyboardButton('💸Bᴜʏ Pʀɪᴍᴇ Nᴏᴡ💸', callback_data='prime')
         ]]
@@ -76,12 +81,15 @@ async def cb_handler(client: Client, query: CallbackQuery):
         buttons = [[
             InlineKeyboardButton('😁ʜᴏᴡ ᴛᴏ ᴜsᴇ😁', callback_data='use')
         ],[
-            InlineKeyboardButton('🔍 sᴜᴘᴘᴏʀᴛ ɢʀᴏᴜᴘ', url='https://t.me/PandaWepChat'),
-            InlineKeyboardButton('🤖 ᴜᴘᴅᴀᴛᴇ ᴄʜᴀɴɴᴇʟ', url='https://t.me/pandawep'),
-            InlineKeyboardButton('😎 ᴏᴡɴ ʙᴏᴛ 😎', callback_data='own'),
+            InlineKeyboardButton('🔍 sᴜᴘᴘᴏʀᴛ ɢʀᴏᴜᴘ', url='https://t.me/PandaWepChat')
         ],[
-            InlineKeyboardButton('🧑‍💻ᴅᴇᴠᴇʟᴏᴘᴇʀ🧑‍💻', url='https://t.me/AshutoshGoswami24'),
-            InlineKeyboardButton('🧑‍💻ᴅᴇᴠ Sᴜᴘᴘᴏʀᴛ🧑‍💻', url='https://t.me/AshuSupport'),
+            InlineKeyboardButton('🤖 ᴜᴘᴅᴀᴛᴇ ᴄʜᴀɴɴᴇʟ', url='https://t.me/pandawep')
+        ],[
+            InlineKeyboardButton('😎 ᴏᴡɴ ʙᴏᴛ 😎', callback_data='own')
+        ],[
+            InlineKeyboardButton('🧑‍💻ᴅᴇᴠᴇʟᴏᴘᴇʀ🧑‍💻', url='https://t.me/AshutoshGoswami24')
+        ],[
+            InlineKeyboardButton('🧑‍💻ᴅᴇᴠ Sᴜᴘᴘᴏʀᴛ🧑‍💻', url='https://t.me/AshuSupport')
         ],[
             InlineKeyboardButton('💸Bᴜʏ Pʀɪᴍᴇ Nᴏᴡ💸', callback_data='prime')
         ]]
@@ -119,7 +127,8 @@ async def cb_handler(client: Client, query: CallbackQuery):
 
     elif query.data == "own":
         buttons = [[
-            InlineKeyboardButton('🏠Hᴏᴍᴇ🏠', callback_data='start'),
+            InlineKeyboardButton('🏠Hᴏᴍᴇ🏠', callback_data='start')
+        ],[
             InlineKeyboardButton('💸Bᴜʏ Pʀɪᴍᴇ Nᴏᴡ💸', callback_data='prime')
         ]]
         await client.edit_message_media(
@@ -136,10 +145,12 @@ async def cb_handler(client: Client, query: CallbackQuery):
 
     elif query.data == "prime":
         buttons = [[
-           InlineKeyboardButton('💸𝗱𝗼𝗻𝗮𝘁𝗲💸', url='https://ashubotz.github.io/Pay/bot/txtdonet.html'),
+            InlineKeyboardButton('💸𝗱𝗼𝗻𝗮𝘁𝗲💸', url='https://ashubotz.github.io/Pay/bot/txtdonet.html')
+        ],[
             InlineKeyboardButton('💸Bᴜʏ Bᴏᴛ Oɴʟʏ ₹𝟽𝟶💸', callback_data='own')
         ],[
-          InlineKeyboardButton('📸📸sᴇɴᴅ sᴄʀᴇᴇɴsʜᴏᴛ ʜᴇʀᴇ🖼️🖼️', url='https://t.me/MovieXPrime_bot'),
+          InlineKeyboardButton('📸📸sᴇɴᴅ sᴄʀᴇᴇɴsʜᴏᴛ ʜᴇʀᴇ🖼️🖼️', url='https://t.me/MovieXPrime_bot')
+        ],[
           InlineKeyboardButton('🏠Hᴏᴍᴇ🏠', callback_data='start')
         ]]
         await client.edit_message_media(
@@ -153,8 +164,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             reply_markup=reply_markup,
             parse_mode=enums.ParseMode.HTML
         )  
-
-@bot.on_message(filters.command("stop"))
+@bot.on_message(filters.command(["stop"]) & filters.user(AUTH_USERS))
 async def restart_handler(_, m):
     await m.reply_text("**Stop Joine @AshutoshGoswami24 @PandaWep**", True)
     os.execl(sys.executable, sys.executable, *sys.argv)
@@ -185,18 +195,18 @@ async def account_login(bot: Client, m: Message):
            return
     
    
-    await editable.edit(f"∝ 𝐓𝐨𝐭𝐚𝐥 𝐋𝐢𝐧𝐤 𝐅𝐨𝐮𝐧𝐝 𝐀𝐫𝐞 🔗** **{len(links)}**\n\n𝐒𝐞𝐧𝐝 𝐅𝐫𝐨𝐦 𝐖𝐡𝐞𝐫𝐞 𝐘𝐨𝐮 𝐖𝐚𝐧𝐭 𝐓𝐨 𝐃𝐨𝐰𝐧𝐥𝐨𝐚𝐝 𝐈𝐧𝐢𝐭𝐚𝐥 𝐢𝐬 **1**\n\nPlz Donate For Devloper /donate")
+    await editable.edit(f"∝ 𝐓𝐨𝐭𝐚𝐥 𝐋𝐢𝐧𝐤 𝐅𝐨𝐮𝐧𝐝 𝐀𝐫𝐞 🔗** **{len(links)}**\n\n𝐒𝐞𝐧𝐝 𝐅𝐫𝐨𝐦 𝐖𝐡𝐞𝐫𝐞 𝐘𝐨𝐮 𝐖𝐚𝐧𝐭 𝐓𝐨 𝐃𝐨𝐰𝐧𝐥𝐨𝐚𝐝 𝐈𝐧𝐢𝐭𝐚𝐥 𝐢𝐬 **1**")
     input0: Message = await bot.listen(editable.chat.id)
     raw_text = input0.text
     await input0.delete(True)
 
-    await editable.edit("∝ 𝐍𝐨𝐰 𝐏𝐥𝐞𝐚𝐬𝐞 𝐒𝐞𝐧𝐝 𝐌𝐞 𝐘𝐨𝐮𝐫 𝐁𝐚𝐭𝐜𝐡 𝐍𝐚𝐦𝐞\n\nPlz Donate For Devloper /donate")
+    await editable.edit("∝ 𝐍𝐨𝐰 𝐏𝐥𝐞𝐚𝐬𝐞 𝐒𝐞𝐧𝐝 𝐌𝐞 𝐘𝐨𝐮𝐫 𝐁𝐚𝐭𝐜𝐡 𝐍𝐚𝐦𝐞")
     input1: Message = await bot.listen(editable.chat.id)
     raw_text0 = input1.text
     await input1.delete(True)
     
 
-    await editable.edit("∝ 𝐄𝐧𝐭𝐞𝐫 𝐄𝐞𝐬𝐨𝐥𝐮𝐭𝐢𝐨𝐧 🎬\n☞ 144,240,360,480,720,1080\nPlease Choose Quality\n**@AshutoshGoswami24 @PandaWep**\n\nPlz Donate For Devloper /donate")
+    await editable.edit("∝ 𝐄𝐧𝐭𝐞𝐫 𝐄𝐞𝐬𝐨𝐥𝐮𝐭𝐢𝐨𝐧 🎬\n☞ 144,240,360,480,720,1080\nPlease Choose Quality\n**@AshutoshGoswami24 @PandaWep**")
     input2: Message = await bot.listen(editable.chat.id)
     raw_text2 = input2.text
     await input2.delete(True)
@@ -220,7 +230,7 @@ async def account_login(bot: Client, m: Message):
     
     
 
-    await editable.edit("✏️ Now Enter A Caption to add caption on your uploaded file\n\nPlz Donate For Devloper /donate")
+    await editable.edit("✏️ Now Enter A Caption to add caption on your uploaded file")
     input3: Message = await bot.listen(editable.chat.id)
     raw_text3 = input3.text
     await input3.delete(True)
@@ -230,7 +240,7 @@ async def account_login(bot: Client, m: Message):
     else:
         MR = raw_text3
    
-    await editable.edit("🌄 Now send the Thumb url\nEg » \n\n Or if don't want thumbnail send = no\n\nPlz Donate For Devloper /donate")
+    await editable.edit("🌄 Now send the Thumb url\nEg » \n\n Or if don't want thumbnail send = no")
     input6 = message = await bot.listen(editable.chat.id)
     raw_text6 = input6.text
     await input6.delete(True)
@@ -326,13 +336,14 @@ async def account_login(bot: Client, m: Message):
 
     except Exception as e:
         await m.reply_text(e)
-    await m.reply_text("𝐒𝐮𝐜𝐜𝐞𝐬𝐬𝐟𝐮𝐥𝐥𝐲 𝐃𝐨𝐧𝐞 @AshutoshGoswami24 @PandaWep\n\nPlz Donate For Devloper /donate")
+    await m.reply_text("𝐒𝐮𝐜𝐜𝐞𝐬𝐬𝐟𝐮𝐥𝐥𝐲 𝐃𝐨𝐧𝐞 @AshutoshGoswami24 @PandaWep")
 
 # Define your sorry message and help link for users who are not authenticated
 @bot.on_message(~filters.user(AUTH_USERS))
 async def unauthorized_user(bot, message):
     sorry_message = (
-        """If you need buy prime Pay And Send Screenshot<a href="https://t.me/AshuXRobot">Ashu Robot</a>"""
+       """If you need buy prime Pay And Send Screenshot<a href="https://t.me/AshuXRobot">Ashu Robot</a>"""
+       """If you need buy prime Pay And Send Screenshot<a href="https://t.me/AshuXRobot">Ashu Robot</a>"""
     )
     await message.reply_text(sorry_message, disable_web_page_preview=True)
 

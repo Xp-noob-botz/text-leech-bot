@@ -4,9 +4,9 @@ from os import getenv, environ
 
 
 #requrments
-API_ID = int(environ.get("api_id", "29917436"))
-API_HASE = environ.get("api_hash", "4a926822b076a086a167fe8f2701d3e9")
-BOT_TOKEN = environ.get("bot_token", "6679365516:AAH2erhiJcYOzpuzroTNiOeX20jaCQ67FfQ")
+API_ID = int(environ.get("API_ID", "29917436"))
+API_HASE = environ.get("API_HASE", "4a926822b076a086a167fe8f2701d3e9")
+BOT_TOKEN = environ.get("BOT_TOKEN", "6679365516:AAH2erhiJcYOzpuzroTNiOeX20jaCQ67FfQ")
 AUTH_USERS = [7062828064, 5601277336, 6142138951]
 
 #img
@@ -51,7 +51,13 @@ If you want to buy your own bot for only 70₹, then message him: <a href="https
 अगर आपको अपना बॉट खरीदना है, तो केवल 70₹ में उससे संपर्क करें: <a href="https://t.me/AshuXRobot">Ashu Robot</a>
 </i></b>"""
 
-OWN_TXT = """<b>Send Money 70₹ & DM Me</b>"""
+OWN_TXT = """<b>Send Money 70₹ & DM Me
+➠ 16MbPs Download Speed
+➠ 7 MbPs Upload Speed [If You Have Telegram Prime Then 10 To 16MbPs(40₹+)]
+➠ File Size 2GB [If You Have Telegram Prime Then 4GB(40₹+)]
+➠ Bast And Fast Video Compressor [40₹+]
+➠ Error Support For 7 Day
+</b>"""
 
 START_TXT = """<b>Hay {} I AM {} Bot!
 
