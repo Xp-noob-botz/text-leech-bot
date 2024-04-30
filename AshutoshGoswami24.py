@@ -164,11 +164,18 @@ async def cb_handler(client: Client, query: CallbackQuery):
             reply_markup=reply_markup,
             parse_mode=enums.ParseMode.HTML
         )  
+
 @bot.on_message(filters.command(["stop"]) & filters.user(AUTH_USERS))
 async def restart_handler(_, m):
-    await m.reply_text("**Stop Joine @AshutoshGoswami24 @PandaWep**", True)
-    os.execl(sys.executable, sys.executable, *sys.argv)
-
+    try:
+        # Check if the message contains downloadable media
+        if m.media:
+            await m.reply_text("**Stop Joine @AshutoshGoswami24 @PandaWep**", True)
+            os.execl(sys.executable, sys.executable, *sys.argv)
+        else:
+            await m.reply_text("This message doesn't contain any downloadable media.")
+    except Exception as e:
+        await m.reply_text(f"An error occurred: {e}")
 
 # Define your command handler for authenticated users
 @bot.on_message(filters.command(["upload"]) & filters.user(AUTH_USERS))
