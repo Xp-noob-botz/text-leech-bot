@@ -165,9 +165,9 @@ async def cb_handler(client: Client, query: CallbackQuery):
             parse_mode=enums.ParseMode.HTML
         )  
 
-#& filters.user(AUTH_USERS)
+#
 # Define your command handler for authenticated users
-@bot.on_message(filters.command(["upload"]))
+@bot.on_message(filters.command(["upload"])& filters.user(AUTH_USERS))
 async def account_login(bot: Client, m: Message):
     editable = await m.reply_text('𝐓𝐨 𝐃𝐨𝐰𝐧𝐥𝐨𝐚𝐝 𝐀 𝐓𝐱𝐭 𝐅𝐢𝐥𝐞 𝐒𝐞𝐧𝐝 𝐇𝐞𝐫𝐞 ⏍')
     input: Message = await bot.listen(editable.chat.id)
@@ -335,7 +335,7 @@ async def account_login(bot: Client, m: Message):
     await m.reply_text("𝐒𝐮𝐜𝐜𝐞𝐬𝐬𝐟𝐮𝐥𝐥𝐲 𝐃𝐨𝐧𝐞 @AshutoshGoswami24 @PandaWep")
     
 #@bot.on_message(filters.command(["stop"]) & filters.user(AUTH_USERS))
-@bot.on_message(filters.command("stop"))
+@bot.on_message(filters.command("stop")& filters.user(AUTH_USERS))
 async def restart_handler(_, m):
     await m.reply_text("**Stop Joine @AshutoshGoswami24 @PandaWep**", True)
     os.execl(sys.executable, sys.executable, *sys.argv)
