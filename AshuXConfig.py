@@ -4,13 +4,15 @@ from os import getenv, environ
 
 
 #requrments
-# API_ID = int(environ.get("API_ID", "29917436"))
-# API_HASE = environ.get("API_HASE", "4a926822b076a086a167fe8f2701d3e9")
-# BOT_TOKEN = environ.get("BOT_TOKEN", "6679365516:AAGYRwUkGGLNCoHP_AvTTqBG4CNbarstBVs")
-
 API_ID = int(environ.get("API_ID", "29917436"))
 API_HASE = environ.get("API_HASE", "4a926822b076a086a167fe8f2701d3e9")
-BOT_TOKEN = environ.get("BOT_TOKEN", "7126726584:AAEvsulTILtDO44lctlzDDYTGGvwL5oXQU0")
+BOT_TOKEN = environ.get("BOT_TOKEN", "6679365516:AAGYRwUkGGLNCoHP_AvTTqBG4CNbarstBVs")
+
+# API_ID = int(environ.get("API_ID", "29917436"))
+# API_HASE = environ.get("API_HASE", "4a926822b076a086a167fe8f2701d3e9")
+# BOT_TOKEN = environ.get("BOT_TOKEN", "7126726584:AAEvsulTILtDO44lctlzDDYTGGvwL5oXQU0")
+
+
 AUTH_USERS = [7062828064, 5601277336, 6142138951, 6687634412]
 
 #img
