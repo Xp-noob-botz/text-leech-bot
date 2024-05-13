@@ -4,14 +4,14 @@ from os import getenv, environ
 
 
 #requrments
+# API_ID = int(environ.get("API_ID", "29917436"))
+# API_HASE = environ.get("API_HASE", "4a926822b076a086a167fe8f2701d3e9")
+# BOT_TOKEN = environ.get("BOT_TOKEN", "6679365516:AAGYRwUkGGLNCoHP_AvTTqBG4CNbarstBVs")
+
 API_ID = int(environ.get("API_ID", "29917436"))
 API_HASE = environ.get("API_HASE", "4a926822b076a086a167fe8f2701d3e9")
-BOT_TOKEN = environ.get("BOT_TOKEN", "6679365516:AAGYRwUkGGLNCoHP_AvTTqBG4CNbarstBVs")
-
-# API_ID = int(environ.get("API_ID", "26644998"))
-# API_HASE = environ.get("API_HASE", "4ef1a5aee96e94ebfc6a96c33bc4c5e3")
-# BOT_TOKEN = environ.get("BOT_TOKEN", "7071388703:AAGtjCkNFqMnAxit3IR8oQrPpLF35VuA_xI")
-AUTH_USERS = [7062828064, 5601277336, 6142138951]
+BOT_TOKEN = environ.get("BOT_TOKEN", "7126726584:AAEvsulTILtDO44lctlzDDYTGGvwL5oXQU0")
+AUTH_USERS = [7062828064, 5601277336, 6142138951, 6687634412]
 
 #img
 QRPICS = (environ.get('QRPICS', 'https://graph.org/file/867866ae66f1d42413c71.jpg https://graph.org/file/867866ae66f1d42413c71.jpg')).split()
