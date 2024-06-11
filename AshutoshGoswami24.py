@@ -167,7 +167,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
 
 #
 # Define your command handler for authenticated users
-@bot.on_message(filters.command(["upload"])) # & filters.user(AUTH_USERS)
+@bot.on_message(filters.command(["upload"]) & filters.user(AUTH_USERS)) # 
 async def account_login(bot: Client, m: Message):
     editable = await m.reply_text('𝐓𝐨 𝐃𝐨𝐰𝐧𝐥𝐨𝐚𝐝 𝐀 𝐓𝐱𝐭 𝐅𝐢𝐥𝐞 𝐒𝐞𝐧𝐝 𝐇𝐞𝐫𝐞 ⏍')
     input: Message = await bot.listen(editable.chat.id)
@@ -336,19 +336,19 @@ async def account_login(bot: Client, m: Message):
     
 
 
-@bot.on_message(filters.command(["stop"]))#& filters.user(AUTH_USERS)
+@bot.on_message(filters.command(["stop"])& filters.user(AUTH_USERS))#
 async def restart_handler(_, m):
     await m.reply_text("**Stop Joine @AshutoshGoswami24 @PandaWep**", True)
     os.execl(sys.executable, sys.executable, *sys.argv)
 # Define your sorry message and help link for users who are not authenticated
 
-# @bot.on_message(~filters.user(AUTH_USERS))
-# async def unauthorized_user(bot, message):
-#     sorry_message = (
+@bot.on_message(~filters.user(AUTH_USERS))
+async def unauthorized_user(bot, message):
+    sorry_message = (
 
-#        """If you need buy prime Pay And Send Screenshot<a href="https://t.me/AshuXRobot">Ashu Robot</a>"""
-#     )
-#     await message.reply_text(sorry_message, disable_web_page_preview=True)
+       """If you need buy prime Pay And Send Screenshot<a href="https://t.me/AshuXRobot">Ashu Robot</a>"""
+    )
+    await message.reply_text(sorry_message, disable_web_page_preview=True)
 
 
 
