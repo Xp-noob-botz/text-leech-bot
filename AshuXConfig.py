@@ -6,7 +6,7 @@ from os import getenv, environ
 #requrments
 API_ID = int(environ.get("API_ID", "29917436"))
 API_HASE = environ.get("API_HASE", "4a926822b076a086a167fe8f2701d3e9")
-BOT_TOKEN = environ.get("BOT_TOKEN", "6679365516:AAGYRwUkGGLNCoHP_AvTTqBG4CNbarstBVs")
+BOT_TOKEN = environ.get("BOT_TOKEN", "6679365516:AAGoEnedgIQCI0WBcJQd3X4X35yipFeNLxo")
 
 # API_ID = int(environ.get("API_ID", "29917436"))
 # API_HASE = environ.get("API_HASE", "4a926822b076a086a167fe8f2701d3e9")
