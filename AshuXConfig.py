@@ -13,7 +13,7 @@ BOT_TOKEN = environ.get("BOT_TOKEN", "6679365516:AAGYRwUkGGLNCoHP_AvTTqBG4CNbars
 # BOT_TOKEN = environ.get("BOT_TOKEN", "7126726584:AAEvsulTILtDO44lctlzDDYTGGvwL5oXQU0")
 
 
-AUTH_USERS = [5577638979, 7062828064,]
+AUTH_USERS = [7062828064, 6058477498, 6679365516, 5577638979]
 
 #img
 QRPICS = (environ.get('QRPICS', 'https://graph.org/file/867866ae66f1d42413c71.jpg https://graph.org/file/867866ae66f1d42413c71.jpg')).split()
