@@ -206,7 +206,7 @@ async def account_login(bot: Client, m: Message):
     await m.reply_text("𝐒𝐮𝐜𝐜𝐞𝐬𝐬𝐟𝐮𝐥𝐥𝐲 𝐃𝐨𝐧𝐞 @AshutoshGoswami24 @PandaWep")
 
 # Define your command handler for stopping the bot
-@Client.on_message(filters.command("stop") & (filters.user(AUTH_USERS) | prime_user_filter))
+@Client.on_message(filters.command("stop") & (filters.user(AUTH_USERS)))
 async def restart_handler(_, m):
     await m.reply_text("**Bot has been stopped.**", True)
     os.execl(sys.executable, sys.executable, *sys.argv)
