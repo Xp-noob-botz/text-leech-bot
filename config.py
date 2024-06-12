@@ -18,7 +18,7 @@ AUTH_USERS = [7062828064, 6679365516]
 #img
 QRPICS = (environ.get('QRPICS', 'https://graph.org/file/867866ae66f1d42413c71.jpg https://graph.org/file/867866ae66f1d42413c71.jpg')).split()
 
-PICS = (environ.get('PICS', 'https://graph.org/file/3148e0aa43073985fa9c0.jpg https://graph.org/file/3148e0aa43073985fa9c0.jpg')).split()
+PICS = (environ.get('PICS', 'https://graph.org/file/08fdfd18424ca5071c25c.jpg https://graph.org/file/08fdfd18424ca5071c25c.jpg')).split()
 
 BUY_PRIME_PICS = (environ.get('BUY_PRIME_PICS', 'https://graph.org/file/867866ae66f1d42413c71.jpg https://graph.org/file/867866ae66f1d42413c71.jpg')).split()
 
