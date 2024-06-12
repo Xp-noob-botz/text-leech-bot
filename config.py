@@ -13,7 +13,7 @@ from os import getenv, environ
 # BOT_TOKEN = environ.get("BOT_TOKEN", "7126726584:AAEvsulTILtDO44lctlzDDYTGGvwL5oXQU0")
 
 
-AUTH_USERS = [7062828064, 5577638979]
+AUTH_USERS = [7062828064, 6679365516]
 
 #img
 QRPICS = (environ.get('QRPICS', 'https://graph.org/file/867866ae66f1d42413c71.jpg https://graph.org/file/867866ae66f1d42413c71.jpg')).split()
