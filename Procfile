@@ -1,1 +1,1 @@
-worker: python3 AshutoshGoswami24.py
+worker: python3 bot.py

@@ -1,0 +1,1220 @@
+12-Jun-24 15:41:45 - ERROR - This message doesn't contain any downloadable media [dispatcher.py:253]
+Traceback (most recent call last):
+  File "/home/ashu/.local/lib/python3.10/site-packages/pyrogram/dispatcher.py", line 240, in handler_worker
+    await handler.callback(self.client, *args)
+  File "/home/ashu/.local/lib/python3.10/site-packages/pyromod/listen/listen.py", line 93, in resolve_listener
+    await self.user_callback(client, message, *args)
+  File "/mnt/c/Users/pc/Desktop/save/Txt V2/savex/plugins/txt/txt.py", line 150, in account_login
+    x = await input.download()
+  File "/home/ashu/.local/lib/python3.10/site-packages/pyrogram/types/messages_and_media/message.py", line 3478, in download
+    return await self._client.download_media(
+  File "/home/ashu/.local/lib/python3.10/site-packages/pyrogram/methods/messages/download_media.py", line 132, in download_media
+    raise ValueError("This message doesn't contain any downloadable media")
+ValueError: This message doesn't contain any downloadable media
+12-Jun-24 15:46:17 - WARNING - [renamer] Waiting for 3 seconds before continuing (required by "users.GetFullUser") [session.py:396]
+12-Jun-24 15:46:26 - ERROR - type object 'Config' has no attribute 'LOG_CHANNEL' [dispatcher.py:229]
+Traceback (most recent call last):
+  File "/home/ashu/.local/lib/python3.10/site-packages/pyrogram/dispatcher.py", line 226, in handler_worker
+    if await handler.check(self.client, parsed_update):
+  File "/home/ashu/.local/lib/python3.10/site-packages/pyromod/listen/listen.py", line 103, in check
+    await self.filters(client, update)
+  File "/home/ashu/.local/lib/python3.10/site-packages/pyrogram/filters.py", line 79, in __call__
+    y = await self.other(client, update)
+  File "/mnt/c/Users/pc/Desktop/save/Txt V2/savex/plugins/force_subs.py", line 8, in not_subscribed
+    await AshutoshGoswami24.add_user(client, message)
+  File "/mnt/c/Users/pc/Desktop/save/Txt V2/savex/helper/database.py", line 25, in add_user
+    await send_log(b, u)
+  File "/mnt/c/Users/pc/Desktop/save/Txt V2/savex/helper/utils.py", line 73, in send_log
+    if Config.LOG_CHANNEL is not None:
+AttributeError: type object 'Config' has no attribute 'LOG_CHANNEL'
+12-Jun-24 22:26:25 - ERROR - Telegram says: [400 CHAT_ADMIN_REQUIRED] - The method requires chat admin privileges (caused by "channels.GetParticipant") [dispatcher.py:229]
+Traceback (most recent call last):
+  File "/home/ashu/.local/lib/python3.10/site-packages/pyrogram/dispatcher.py", line 226, in handler_worker
+    if await handler.check(self.client, parsed_update):
+  File "/home/ashu/.local/lib/python3.10/site-packages/pyromod/listen/listen.py", line 103, in check
+    await self.filters(client, update)
+  File "/home/ashu/.local/lib/python3.10/site-packages/pyrogram/filters.py", line 79, in __call__
+    y = await self.other(client, update)
+  File "/mnt/c/Users/pc/Desktop/save/Txt V2/savex/plugins/force_subs.py", line 12, in not_subscribed
+    user = await client.get_chat_member(Config.FORCE_SUB, message.from_user.id)
+  File "/home/ashu/.local/lib/python3.10/site-packages/pyrogram/methods/chats/get_chat_member.py", line 80, in get_chat_member
+    r = await self.invoke(
+  File "/home/ashu/.local/lib/python3.10/site-packages/pyrogram/methods/advanced/invoke.py", line 79, in invoke
+    r = await self.session.invoke(
+  File "/home/ashu/.local/lib/python3.10/site-packages/pyrogram/session/session.py", line 389, in invoke
+    return await self.send(query, timeout=timeout)
+  File "/home/ashu/.local/lib/python3.10/site-packages/pyrogram/session/session.py", line 357, in send
+    RPCError.raise_it(result, type(data))
+  File "/home/ashu/.local/lib/python3.10/site-packages/pyrogram/errors/rpc_error.py", line 91, in raise_it
+    raise getattr(
+pyrogram.errors.exceptions.bad_request_400.ChatAdminRequired: Telegram says: [400 CHAT_ADMIN_REQUIRED] - The method requires chat admin privileges (caused by "channels.GetParticipant")
+12-Jun-24 22:27:23 - ERROR - Telegram says: [400 CHAT_ADMIN_REQUIRED] - The method requires chat admin privileges (caused by "channels.GetParticipant") [dispatcher.py:229]
+Traceback (most recent call last):
+  File "/home/ashu/.local/lib/python3.10/site-packages/pyrogram/dispatcher.py", line 226, in handler_worker
+    if await handler.check(self.client, parsed_update):
+  File "/home/ashu/.local/lib/python3.10/site-packages/pyromod/listen/listen.py", line 103, in check
+    await self.filters(client, update)
+  File "/home/ashu/.local/lib/python3.10/site-packages/pyrogram/filters.py", line 79, in __call__
+    y = await self.other(client, update)
+  File "/mnt/c/Users/pc/Desktop/save/Txt V2/savex/plugins/force_subs.py", line 12, in not_subscribed
+    user = await client.get_chat_member(Config.FORCE_SUB, message.from_user.id)
+  File "/home/ashu/.local/lib/python3.10/site-packages/pyrogram/methods/chats/get_chat_member.py", line 80, in get_chat_member
+    r = await self.invoke(
+  File "/home/ashu/.local/lib/python3.10/site-packages/pyrogram/methods/advanced/invoke.py", line 79, in invoke
+    r = await self.session.invoke(
+  File "/home/ashu/.local/lib/python3.10/site-packages/pyrogram/session/session.py", line 389, in invoke
+    return await self.send(query, timeout=timeout)
+  File "/home/ashu/.local/lib/python3.10/site-packages/pyrogram/session/session.py", line 357, in send
+    RPCError.raise_it(result, type(data))
+  File "/home/ashu/.local/lib/python3.10/site-packages/pyrogram/errors/rpc_error.py", line 91, in raise_it
+    raise getattr(
+pyrogram.errors.exceptions.bad_request_400.ChatAdminRequired: Telegram says: [400 CHAT_ADMIN_REQUIRED] - The method requires chat admin privileges (caused by "channels.GetParticipant")
+12-Jun-24 22:27:25 - ERROR - Telegram says: [400 CHAT_ADMIN_REQUIRED] - The method requires chat admin privileges (caused by "channels.GetParticipant") [dispatcher.py:229]
+Traceback (most recent call last):
+  File "/home/ashu/.local/lib/python3.10/site-packages/pyrogram/dispatcher.py", line 226, in handler_worker
+    if await handler.check(self.client, parsed_update):
+  File "/home/ashu/.local/lib/python3.10/site-packages/pyromod/listen/listen.py", line 103, in check
+    await self.filters(client, update)
+  File "/home/ashu/.local/lib/python3.10/site-packages/pyrogram/filters.py", line 79, in __call__
+    y = await self.other(client, update)
+  File "/mnt/c/Users/pc/Desktop/save/Txt V2/savex/plugins/force_subs.py", line 12, in not_subscribed
+    user = await client.get_chat_member(Config.FORCE_SUB, message.from_user.id)
+  File "/home/ashu/.local/lib/python3.10/site-packages/pyrogram/methods/chats/get_chat_member.py", line 80, in get_chat_member
+    r = await self.invoke(
+  File "/home/ashu/.local/lib/python3.10/site-packages/pyrogram/methods/advanced/invoke.py", line 79, in invoke
+    r = await self.session.invoke(
+  File "/home/ashu/.local/lib/python3.10/site-packages/pyrogram/session/session.py", line 389, in invoke
+    return await self.send(query, timeout=timeout)
+  File "/home/ashu/.local/lib/python3.10/site-packages/pyrogram/session/session.py", line 357, in send
+    RPCError.raise_it(result, type(data))
+  File "/home/ashu/.local/lib/python3.10/site-packages/pyrogram/errors/rpc_error.py", line 91, in raise_it
+    raise getattr(
+pyrogram.errors.exceptions.bad_request_400.ChatAdminRequired: Telegram says: [400 CHAT_ADMIN_REQUIRED] - The method requires chat admin privileges (caused by "channels.GetParticipant")
+12-Jun-24 22:27:27 - ERROR - This message doesn't contain any downloadable media [dispatcher.py:253]
+Traceback (most recent call last):
+  File "/home/ashu/.local/lib/python3.10/site-packages/pyrogram/dispatcher.py", line 240, in handler_worker
+    await handler.callback(self.client, *args)
+  File "/home/ashu/.local/lib/python3.10/site-packages/pyromod/listen/listen.py", line 93, in resolve_listener
+    await self.user_callback(client, message, *args)
+  File "/mnt/c/Users/pc/Desktop/save/Txt V2/savex/plugins/txt/txt.py", line 150, in account_login
+    x = await input.download()
+  File "/home/ashu/.local/lib/python3.10/site-packages/pyrogram/types/messages_and_media/message.py", line 3478, in download
+    return await self._client.download_media(
+  File "/home/ashu/.local/lib/python3.10/site-packages/pyrogram/methods/messages/download_media.py", line 132, in download_media
+    raise ValueError("This message doesn't contain any downloadable media")
+ValueError: This message doesn't contain any downloadable media
+12-Jun-24 22:27:32 - ERROR - Telegram says: [400 CHAT_ADMIN_REQUIRED] - The method requires chat admin privileges (caused by "channels.GetParticipant") [dispatcher.py:229]
+Traceback (most recent call last):
+  File "/home/ashu/.local/lib/python3.10/site-packages/pyrogram/dispatcher.py", line 226, in handler_worker
+    if await handler.check(self.client, parsed_update):
+  File "/home/ashu/.local/lib/python3.10/site-packages/pyromod/listen/listen.py", line 103, in check
+    await self.filters(client, update)
+  File "/home/ashu/.local/lib/python3.10/site-packages/pyrogram/filters.py", line 79, in __call__
+    y = await self.other(client, update)
+  File "/mnt/c/Users/pc/Desktop/save/Txt V2/savex/plugins/force_subs.py", line 12, in not_subscribed
+    user = await client.get_chat_member(Config.FORCE_SUB, message.from_user.id)
+  File "/home/ashu/.local/lib/python3.10/site-packages/pyrogram/methods/chats/get_chat_member.py", line 80, in get_chat_member
+    r = await self.invoke(
+  File "/home/ashu/.local/lib/python3.10/site-packages/pyrogram/methods/advanced/invoke.py", line 79, in invoke
+    r = await self.session.invoke(
+  File "/home/ashu/.local/lib/python3.10/site-packages/pyrogram/session/session.py", line 389, in invoke
+    return await self.send(query, timeout=timeout)
+  File "/home/ashu/.local/lib/python3.10/site-packages/pyrogram/session/session.py", line 357, in send
+    RPCError.raise_it(result, type(data))
+  File "/home/ashu/.local/lib/python3.10/site-packages/pyrogram/errors/rpc_error.py", line 91, in raise_it
+    raise getattr(
+pyrogram.errors.exceptions.bad_request_400.ChatAdminRequired: Telegram says: [400 CHAT_ADMIN_REQUIRED] - The method requires chat admin privileges (caused by "channels.GetParticipant")
+12-Jun-24 22:28:56 - ERROR - Telegram says: [400 CHAT_ADMIN_REQUIRED] - The method requires chat admin privileges (caused by "channels.GetParticipant") [dispatcher.py:229]
+Traceback (most recent call last):
+  File "/home/ashu/.local/lib/python3.10/site-packages/pyrogram/dispatcher.py", line 226, in handler_worker
+    if await handler.check(self.client, parsed_update):
+  File "/home/ashu/.local/lib/python3.10/site-packages/pyromod/listen/listen.py", line 103, in check
+    await self.filters(client, update)
+  File "/home/ashu/.local/lib/python3.10/site-packages/pyrogram/filters.py", line 79, in __call__
+    y = await self.other(client, update)
+  File "/mnt/c/Users/pc/Desktop/save/Txt V2/savex/plugins/force_subs.py", line 12, in not_subscribed
+    user = await client.get_chat_member(Config.FORCE_SUB, message.from_user.id)
+  File "/home/ashu/.local/lib/python3.10/site-packages/pyrogram/methods/chats/get_chat_member.py", line 80, in get_chat_member
+    r = await self.invoke(
+  File "/home/ashu/.local/lib/python3.10/site-packages/pyrogram/methods/advanced/invoke.py", line 79, in invoke
+    r = await self.session.invoke(
+  File "/home/ashu/.local/lib/python3.10/site-packages/pyrogram/session/session.py", line 389, in invoke
+    return await self.send(query, timeout=timeout)
+  File "/home/ashu/.local/lib/python3.10/site-packages/pyrogram/session/session.py", line 357, in send
+    RPCError.raise_it(result, type(data))
+  File "/home/ashu/.local/lib/python3.10/site-packages/pyrogram/errors/rpc_error.py", line 91, in raise_it
+    raise getattr(
+pyrogram.errors.exceptions.bad_request_400.ChatAdminRequired: Telegram says: [400 CHAT_ADMIN_REQUIRED] - The method requires chat admin privileges (caused by "channels.GetParticipant")
+12-Jun-24 22:29:01 - ERROR - Telegram says: [400 CHAT_ADMIN_REQUIRED] - The method requires chat admin privileges (caused by "channels.GetParticipant") [dispatcher.py:229]
+Traceback (most recent call last):
+  File "/home/ashu/.local/lib/python3.10/site-packages/pyrogram/dispatcher.py", line 226, in handler_worker
+    if await handler.check(self.client, parsed_update):
+  File "/home/ashu/.local/lib/python3.10/site-packages/pyromod/listen/listen.py", line 103, in check
+    await self.filters(client, update)
+  File "/home/ashu/.local/lib/python3.10/site-packages/pyrogram/filters.py", line 79, in __call__
+    y = await self.other(client, update)
+  File "/mnt/c/Users/pc/Desktop/save/Txt V2/savex/plugins/force_subs.py", line 12, in not_subscribed
+    user = await client.get_chat_member(Config.FORCE_SUB, message.from_user.id)
+  File "/home/ashu/.local/lib/python3.10/site-packages/pyrogram/methods/chats/get_chat_member.py", line 80, in get_chat_member
+    r = await self.invoke(
+  File "/home/ashu/.local/lib/python3.10/site-packages/pyrogram/methods/advanced/invoke.py", line 79, in invoke
+    r = await self.session.invoke(
+  File "/home/ashu/.local/lib/python3.10/site-packages/pyrogram/session/session.py", line 389, in invoke
+    return await self.send(query, timeout=timeout)
+  File "/home/ashu/.local/lib/python3.10/site-packages/pyrogram/session/session.py", line 357, in send
+    RPCError.raise_it(result, type(data))
+  File "/home/ashu/.local/lib/python3.10/site-packages/pyrogram/errors/rpc_error.py", line 91, in raise_it
+    raise getattr(
+pyrogram.errors.exceptions.bad_request_400.ChatAdminRequired: Telegram says: [400 CHAT_ADMIN_REQUIRED] - The method requires chat admin privileges (caused by "channels.GetParticipant")
+12-Jun-24 22:29:05 - ERROR - This message doesn't contain any downloadable media [dispatcher.py:253]
+Traceback (most recent call last):
+  File "/home/ashu/.local/lib/python3.10/site-packages/pyrogram/dispatcher.py", line 240, in handler_worker
+    await handler.callback(self.client, *args)
+  File "/home/ashu/.local/lib/python3.10/site-packages/pyromod/listen/listen.py", line 93, in resolve_listener
+    await self.user_callback(client, message, *args)
+  File "/mnt/c/Users/pc/Desktop/save/Txt V2/savex/plugins/txt/txt.py", line 28, in account_login
+    x = await input.download()
+  File "/home/ashu/.local/lib/python3.10/site-packages/pyrogram/types/messages_and_media/message.py", line 3478, in download
+    return await self._client.download_media(
+  File "/home/ashu/.local/lib/python3.10/site-packages/pyrogram/methods/messages/download_media.py", line 132, in download_media
+    raise ValueError("This message doesn't contain any downloadable media")
+ValueError: This message doesn't contain any downloadable media
+12-Jun-24 22:29:09 - ERROR - Telegram says: [400 CHAT_ADMIN_REQUIRED] - The method requires chat admin privileges (caused by "channels.GetParticipant") [dispatcher.py:229]
+Traceback (most recent call last):
+  File "/home/ashu/.local/lib/python3.10/site-packages/pyrogram/dispatcher.py", line 226, in handler_worker
+    if await handler.check(self.client, parsed_update):
+  File "/home/ashu/.local/lib/python3.10/site-packages/pyromod/listen/listen.py", line 103, in check
+    await self.filters(client, update)
+  File "/home/ashu/.local/lib/python3.10/site-packages/pyrogram/filters.py", line 79, in __call__
+    y = await self.other(client, update)
+  File "/mnt/c/Users/pc/Desktop/save/Txt V2/savex/plugins/force_subs.py", line 12, in not_subscribed
+    user = await client.get_chat_member(Config.FORCE_SUB, message.from_user.id)
+  File "/home/ashu/.local/lib/python3.10/site-packages/pyrogram/methods/chats/get_chat_member.py", line 80, in get_chat_member
+    r = await self.invoke(
+  File "/home/ashu/.local/lib/python3.10/site-packages/pyrogram/methods/advanced/invoke.py", line 79, in invoke
+    r = await self.session.invoke(
+  File "/home/ashu/.local/lib/python3.10/site-packages/pyrogram/session/session.py", line 389, in invoke
+    return await self.send(query, timeout=timeout)
+  File "/home/ashu/.local/lib/python3.10/site-packages/pyrogram/session/session.py", line 357, in send
+    RPCError.raise_it(result, type(data))
+  File "/home/ashu/.local/lib/python3.10/site-packages/pyrogram/errors/rpc_error.py", line 91, in raise_it
+    raise getattr(
+pyrogram.errors.exceptions.bad_request_400.ChatAdminRequired: Telegram says: [400 CHAT_ADMIN_REQUIRED] - The method requires chat admin privileges (caused by "channels.GetParticipant")
+12-Jun-24 22:29:10 - ERROR - Telegram says: [400 CHAT_ADMIN_REQUIRED] - The method requires chat admin privileges (caused by "channels.GetParticipant") [dispatcher.py:229]
+Traceback (most recent call last):
+  File "/home/ashu/.local/lib/python3.10/site-packages/pyrogram/dispatcher.py", line 226, in handler_worker
+    if await handler.check(self.client, parsed_update):
+  File "/home/ashu/.local/lib/python3.10/site-packages/pyromod/listen/listen.py", line 103, in check
+    await self.filters(client, update)
+  File "/home/ashu/.local/lib/python3.10/site-packages/pyrogram/filters.py", line 79, in __call__
+    y = await self.other(client, update)
+  File "/mnt/c/Users/pc/Desktop/save/Txt V2/savex/plugins/force_subs.py", line 12, in not_subscribed
+    user = await client.get_chat_member(Config.FORCE_SUB, message.from_user.id)
+  File "/home/ashu/.local/lib/python3.10/site-packages/pyrogram/methods/chats/get_chat_member.py", line 80, in get_chat_member
+    r = await self.invoke(
+  File "/home/ashu/.local/lib/python3.10/site-packages/pyrogram/methods/advanced/invoke.py", line 79, in invoke
+    r = await self.session.invoke(
+  File "/home/ashu/.local/lib/python3.10/site-packages/pyrogram/session/session.py", line 389, in invoke
+    return await self.send(query, timeout=timeout)
+  File "/home/ashu/.local/lib/python3.10/site-packages/pyrogram/session/session.py", line 357, in send
+    RPCError.raise_it(result, type(data))
+  File "/home/ashu/.local/lib/python3.10/site-packages/pyrogram/errors/rpc_error.py", line 91, in raise_it
+    raise getattr(
+pyrogram.errors.exceptions.bad_request_400.ChatAdminRequired: Telegram says: [400 CHAT_ADMIN_REQUIRED] - The method requires chat admin privileges (caused by "channels.GetParticipant")
+12-Jun-24 22:29:27 - ERROR - Telegram says: [400 CHAT_ADMIN_REQUIRED] - The method requires chat admin privileges (caused by "channels.GetParticipant") [dispatcher.py:229]
+Traceback (most recent call last):
+  File "/home/ashu/.local/lib/python3.10/site-packages/pyrogram/dispatcher.py", line 226, in handler_worker
+    if await handler.check(self.client, parsed_update):
+  File "/home/ashu/.local/lib/python3.10/site-packages/pyromod/listen/listen.py", line 103, in check
+    await self.filters(client, update)
+  File "/home/ashu/.local/lib/python3.10/site-packages/pyrogram/filters.py", line 79, in __call__
+    y = await self.other(client, update)
+  File "/mnt/c/Users/pc/Desktop/save/Txt V2/savex/plugins/force_subs.py", line 12, in not_subscribed
+    user = await client.get_chat_member(Config.FORCE_SUB, message.from_user.id)
+  File "/home/ashu/.local/lib/python3.10/site-packages/pyrogram/methods/chats/get_chat_member.py", line 80, in get_chat_member
+    r = await self.invoke(
+  File "/home/ashu/.local/lib/python3.10/site-packages/pyrogram/methods/advanced/invoke.py", line 79, in invoke
+    r = await self.session.invoke(
+  File "/home/ashu/.local/lib/python3.10/site-packages/pyrogram/session/session.py", line 389, in invoke
+    return await self.send(query, timeout=timeout)
+  File "/home/ashu/.local/lib/python3.10/site-packages/pyrogram/session/session.py", line 357, in send
+    RPCError.raise_it(result, type(data))
+  File "/home/ashu/.local/lib/python3.10/site-packages/pyrogram/errors/rpc_error.py", line 91, in raise_it
+    raise getattr(
+pyrogram.errors.exceptions.bad_request_400.ChatAdminRequired: Telegram says: [400 CHAT_ADMIN_REQUIRED] - The method requires chat admin privileges (caused by "channels.GetParticipant")
+12-Jun-24 22:29:29 - ERROR - name 'enums' is not defined [dispatcher.py:253]
+Traceback (most recent call last):
+  File "/home/ashu/.local/lib/python3.10/site-packages/pyrogram/dispatcher.py", line 240, in handler_worker
+    await handler.callback(self.client, *args)
+  File "/mnt/c/Users/pc/Desktop/save/Txt V2/savex/plugins/start_&_cb.py", line 76, in cb_handler
+    parse_mode=enums.ParseMode.HTML
+NameError: name 'enums' is not defined
+12-Jun-24 22:29:35 - ERROR - Telegram says: [400 CHAT_ADMIN_REQUIRED] - The method requires chat admin privileges (caused by "channels.GetParticipant") [dispatcher.py:229]
+Traceback (most recent call last):
+  File "/home/ashu/.local/lib/python3.10/site-packages/pyrogram/dispatcher.py", line 226, in handler_worker
+    if await handler.check(self.client, parsed_update):
+  File "/home/ashu/.local/lib/python3.10/site-packages/pyromod/listen/listen.py", line 103, in check
+    await self.filters(client, update)
+  File "/home/ashu/.local/lib/python3.10/site-packages/pyrogram/filters.py", line 79, in __call__
+    y = await self.other(client, update)
+  File "/mnt/c/Users/pc/Desktop/save/Txt V2/savex/plugins/force_subs.py", line 12, in not_subscribed
+    user = await client.get_chat_member(Config.FORCE_SUB, message.from_user.id)
+  File "/home/ashu/.local/lib/python3.10/site-packages/pyrogram/methods/chats/get_chat_member.py", line 80, in get_chat_member
+    r = await self.invoke(
+  File "/home/ashu/.local/lib/python3.10/site-packages/pyrogram/methods/advanced/invoke.py", line 79, in invoke
+    r = await self.session.invoke(
+  File "/home/ashu/.local/lib/python3.10/site-packages/pyrogram/session/session.py", line 389, in invoke
+    return await self.send(query, timeout=timeout)
+  File "/home/ashu/.local/lib/python3.10/site-packages/pyrogram/session/session.py", line 357, in send
+    RPCError.raise_it(result, type(data))
+  File "/home/ashu/.local/lib/python3.10/site-packages/pyrogram/errors/rpc_error.py", line 91, in raise_it
+    raise getattr(
+pyrogram.errors.exceptions.bad_request_400.ChatAdminRequired: Telegram says: [400 CHAT_ADMIN_REQUIRED] - The method requires chat admin privileges (caused by "channels.GetParticipant")
+12-Jun-24 22:29:40 - ERROR - name 'enums' is not defined [dispatcher.py:253]
+Traceback (most recent call last):
+  File "/home/ashu/.local/lib/python3.10/site-packages/pyrogram/dispatcher.py", line 240, in handler_worker
+    await handler.callback(self.client, *args)
+  File "/mnt/c/Users/pc/Desktop/save/Txt V2/savex/plugins/start_&_cb.py", line 76, in cb_handler
+    parse_mode=enums.ParseMode.HTML
+NameError: name 'enums' is not defined
+12-Jun-24 22:30:53 - ERROR - Telegram says: [400 CHAT_ADMIN_REQUIRED] - The method requires chat admin privileges (caused by "channels.GetParticipant") [dispatcher.py:229]
+Traceback (most recent call last):
+  File "/home/ashu/.local/lib/python3.10/site-packages/pyrogram/dispatcher.py", line 226, in handler_worker
+    if await handler.check(self.client, parsed_update):
+  File "/home/ashu/.local/lib/python3.10/site-packages/pyromod/listen/listen.py", line 103, in check
+    await self.filters(client, update)
+  File "/home/ashu/.local/lib/python3.10/site-packages/pyrogram/filters.py", line 79, in __call__
+    y = await self.other(client, update)
+  File "/mnt/c/Users/pc/Desktop/save/Txt V2/savex/plugins/force_subs.py", line 12, in not_subscribed
+    user = await client.get_chat_member(Config.FORCE_SUB, message.from_user.id)
+  File "/home/ashu/.local/lib/python3.10/site-packages/pyrogram/methods/chats/get_chat_member.py", line 80, in get_chat_member
+    r = await self.invoke(
+  File "/home/ashu/.local/lib/python3.10/site-packages/pyrogram/methods/advanced/invoke.py", line 79, in invoke
+    r = await self.session.invoke(
+  File "/home/ashu/.local/lib/python3.10/site-packages/pyrogram/session/session.py", line 389, in invoke
+    return await self.send(query, timeout=timeout)
+  File "/home/ashu/.local/lib/python3.10/site-packages/pyrogram/session/session.py", line 357, in send
+    RPCError.raise_it(result, type(data))
+  File "/home/ashu/.local/lib/python3.10/site-packages/pyrogram/errors/rpc_error.py", line 91, in raise_it
+    raise getattr(
+pyrogram.errors.exceptions.bad_request_400.ChatAdminRequired: Telegram says: [400 CHAT_ADMIN_REQUIRED] - The method requires chat admin privileges (caused by "channels.GetParticipant")
+12-Jun-24 22:30:53 - ERROR - Telegram says: [400 CHAT_ADMIN_REQUIRED] - The method requires chat admin privileges (caused by "channels.GetParticipant") [dispatcher.py:229]
+Traceback (most recent call last):
+  File "/home/ashu/.local/lib/python3.10/site-packages/pyrogram/dispatcher.py", line 226, in handler_worker
+    if await handler.check(self.client, parsed_update):
+  File "/home/ashu/.local/lib/python3.10/site-packages/pyromod/listen/listen.py", line 103, in check
+    await self.filters(client, update)
+  File "/home/ashu/.local/lib/python3.10/site-packages/pyrogram/filters.py", line 79, in __call__
+    y = await self.other(client, update)
+  File "/mnt/c/Users/pc/Desktop/save/Txt V2/savex/plugins/force_subs.py", line 12, in not_subscribed
+    user = await client.get_chat_member(Config.FORCE_SUB, message.from_user.id)
+  File "/home/ashu/.local/lib/python3.10/site-packages/pyrogram/methods/chats/get_chat_member.py", line 80, in get_chat_member
+    r = await self.invoke(
+  File "/home/ashu/.local/lib/python3.10/site-packages/pyrogram/methods/advanced/invoke.py", line 79, in invoke
+    r = await self.session.invoke(
+  File "/home/ashu/.local/lib/python3.10/site-packages/pyrogram/session/session.py", line 389, in invoke
+    return await self.send(query, timeout=timeout)
+  File "/home/ashu/.local/lib/python3.10/site-packages/pyrogram/session/session.py", line 357, in send
+    RPCError.raise_it(result, type(data))
+  File "/home/ashu/.local/lib/python3.10/site-packages/pyrogram/errors/rpc_error.py", line 91, in raise_it
+    raise getattr(
+pyrogram.errors.exceptions.bad_request_400.ChatAdminRequired: Telegram says: [400 CHAT_ADMIN_REQUIRED] - The method requires chat admin privileges (caused by "channels.GetParticipant")
+12-Jun-24 22:33:07 - WARNING - Unable to connect due to network issues: Connection timed out [connection.py:50]
+12-Jun-24 22:33:18 - WARNING - Unable to connect due to network issues: Connection timed out [connection.py:50]
+12-Jun-24 22:33:29 - WARNING - Unable to connect due to network issues: Connection timed out [connection.py:50]
+12-Jun-24 22:33:30 - WARNING - Connection failed! Trying again... [connection.py:61]
+12-Jun-24 22:33:39 - WARNING - Unable to connect due to network issues: [Errno 113] Connect call failed ('91.108.56.130', 443) [connection.py:50]
+12-Jun-24 22:33:50 - WARNING - Unable to connect due to network issues: Connection timed out [connection.py:50]
+12-Jun-24 22:40:46 - ERROR - Peer id invalid: -1002188153245 [dispatcher.py:229]
+Traceback (most recent call last):
+  File "/home/ashu/.local/lib/python3.10/site-packages/pyrogram/methods/advanced/resolve_peer.py", line 62, in resolve_peer
+    return await self.storage.get_peer_by_id(peer_id)
+  File "/home/ashu/.local/lib/python3.10/site-packages/pyrogram/storage/sqlite_storage.py", line 142, in get_peer_by_id
+    raise KeyError(f"ID not found: {peer_id}")
+KeyError: 'ID not found: -1002188153245'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ashu/.local/lib/python3.10/site-packages/pyrogram/dispatcher.py", line 226, in handler_worker
+    if await handler.check(self.client, parsed_update):
+  File "/home/ashu/.local/lib/python3.10/site-packages/pyromod/listen/listen.py", line 103, in check
+    await self.filters(client, update)
+  File "/home/ashu/.local/lib/python3.10/site-packages/pyrogram/filters.py", line 79, in __call__
+    y = await self.other(client, update)
+  File "/mnt/c/Users/pc/Desktop/save/Txt V2/savex/plugins/force_subs.py", line 8, in not_subscribed
+    await AshutoshGoswami24.add_user(client, message)
+  File "/mnt/c/Users/pc/Desktop/save/Txt V2/savex/helper/database.py", line 25, in add_user
+    await send_log(b, u)
+  File "/mnt/c/Users/pc/Desktop/save/Txt V2/savex/helper/utils.py", line 77, in send_log
+    await b.send_message(
+  File "/home/ashu/.local/lib/python3.10/site-packages/pyrogram/methods/messages/send_message.py", line 128, in send_message
+    peer=await self.resolve_peer(chat_id),
+  File "/home/ashu/.local/lib/python3.10/site-packages/pyrogram/methods/advanced/resolve_peer.py", line 89, in resolve_peer
+    peer_type = utils.get_peer_type(peer_id)
+  File "/home/ashu/.local/lib/python3.10/site-packages/pyrogram/utils.py", line 246, in get_peer_type
+    raise ValueError(f"Peer id invalid: {peer_id}")
+ValueError: Peer id invalid: -1002188153245
+12-Jun-24 22:40:46 - ERROR - Telegram says: [400 CHAT_ADMIN_REQUIRED] - The method requires chat admin privileges (caused by "channels.GetParticipant") [dispatcher.py:229]
+Traceback (most recent call last):
+  File "/home/ashu/.local/lib/python3.10/site-packages/pyrogram/dispatcher.py", line 226, in handler_worker
+    if await handler.check(self.client, parsed_update):
+  File "/home/ashu/.local/lib/python3.10/site-packages/pyromod/listen/listen.py", line 103, in check
+    await self.filters(client, update)
+  File "/home/ashu/.local/lib/python3.10/site-packages/pyrogram/filters.py", line 79, in __call__
+    y = await self.other(client, update)
+  File "/mnt/c/Users/pc/Desktop/save/Txt V2/savex/plugins/force_subs.py", line 12, in not_subscribed
+    user = await client.get_chat_member(Config.FORCE_SUB, message.from_user.id)
+  File "/home/ashu/.local/lib/python3.10/site-packages/pyrogram/methods/chats/get_chat_member.py", line 80, in get_chat_member
+    r = await self.invoke(
+  File "/home/ashu/.local/lib/python3.10/site-packages/pyrogram/methods/advanced/invoke.py", line 79, in invoke
+    r = await self.session.invoke(
+  File "/home/ashu/.local/lib/python3.10/site-packages/pyrogram/session/session.py", line 389, in invoke
+    return await self.send(query, timeout=timeout)
+  File "/home/ashu/.local/lib/python3.10/site-packages/pyrogram/session/session.py", line 357, in send
+    RPCError.raise_it(result, type(data))
+  File "/home/ashu/.local/lib/python3.10/site-packages/pyrogram/errors/rpc_error.py", line 91, in raise_it
+    raise getattr(
+pyrogram.errors.exceptions.bad_request_400.ChatAdminRequired: Telegram says: [400 CHAT_ADMIN_REQUIRED] - The method requires chat admin privileges (caused by "channels.GetParticipant")
+12-Jun-24 22:40:48 - ERROR - Telegram says: [400 CHAT_ADMIN_REQUIRED] - The method requires chat admin privileges (caused by "channels.GetParticipant") [dispatcher.py:229]
+Traceback (most recent call last):
+  File "/home/ashu/.local/lib/python3.10/site-packages/pyrogram/dispatcher.py", line 226, in handler_worker
+    if await handler.check(self.client, parsed_update):
+  File "/home/ashu/.local/lib/python3.10/site-packages/pyromod/listen/listen.py", line 103, in check
+    await self.filters(client, update)
+  File "/home/ashu/.local/lib/python3.10/site-packages/pyrogram/filters.py", line 79, in __call__
+    y = await self.other(client, update)
+  File "/mnt/c/Users/pc/Desktop/save/Txt V2/savex/plugins/force_subs.py", line 12, in not_subscribed
+    user = await client.get_chat_member(Config.FORCE_SUB, message.from_user.id)
+  File "/home/ashu/.local/lib/python3.10/site-packages/pyrogram/methods/chats/get_chat_member.py", line 80, in get_chat_member
+    r = await self.invoke(
+  File "/home/ashu/.local/lib/python3.10/site-packages/pyrogram/methods/advanced/invoke.py", line 79, in invoke
+    r = await self.session.invoke(
+  File "/home/ashu/.local/lib/python3.10/site-packages/pyrogram/session/session.py", line 389, in invoke
+    return await self.send(query, timeout=timeout)
+  File "/home/ashu/.local/lib/python3.10/site-packages/pyrogram/session/session.py", line 357, in send
+    RPCError.raise_it(result, type(data))
+  File "/home/ashu/.local/lib/python3.10/site-packages/pyrogram/errors/rpc_error.py", line 91, in raise_it
+    raise getattr(
+pyrogram.errors.exceptions.bad_request_400.ChatAdminRequired: Telegram says: [400 CHAT_ADMIN_REQUIRED] - The method requires chat admin privileges (caused by "channels.GetParticipant")
+12-Jun-24 22:41:02 - ERROR - Peer id invalid: -1002188153245 [dispatcher.py:253]
+Traceback (most recent call last):
+  File "/home/ashu/.local/lib/python3.10/site-packages/pyrogram/methods/advanced/resolve_peer.py", line 62, in resolve_peer
+    return await self.storage.get_peer_by_id(peer_id)
+  File "/home/ashu/.local/lib/python3.10/site-packages/pyrogram/storage/sqlite_storage.py", line 142, in get_peer_by_id
+    raise KeyError(f"ID not found: {peer_id}")
+KeyError: 'ID not found: -1002188153245'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ashu/.local/lib/python3.10/site-packages/pyrogram/dispatcher.py", line 240, in handler_worker
+    await handler.callback(self.client, *args)
+  File "/home/ashu/.local/lib/python3.10/site-packages/pyromod/listen/listen.py", line 93, in resolve_listener
+    await self.user_callback(client, message, *args)
+  File "/mnt/c/Users/pc/Desktop/save/Txt V2/savex/plugins/admin_panel.py", line 56, in broadcast_handler
+    await bot.send_message(Config.LOG_CHANNEL, f"{m.from_user.mention} or {m.from_user.id} Is Started The Broadcast......")
+  File "/home/ashu/.local/lib/python3.10/site-packages/pyrogram/methods/messages/send_message.py", line 128, in send_message
+    peer=await self.resolve_peer(chat_id),
+  File "/home/ashu/.local/lib/python3.10/site-packages/pyrogram/methods/advanced/resolve_peer.py", line 89, in resolve_peer
+    peer_type = utils.get_peer_type(peer_id)
+  File "/home/ashu/.local/lib/python3.10/site-packages/pyrogram/utils.py", line 246, in get_peer_type
+    raise ValueError(f"Peer id invalid: {peer_id}")
+ValueError: Peer id invalid: -1002188153245
+12-Jun-24 22:42:40 - ERROR - 6679365516 : Telegram says: [400 USER_IS_BOT] - A bot cannot send messages to other bots or to itself (caused by "messages.SendMessage") [admin_panel.py:99]
+12-Jun-24 22:44:07 - ERROR - Telegram says: [400 CHAT_ADMIN_REQUIRED] - The method requires chat admin privileges (caused by "channels.GetParticipant") [dispatcher.py:229]
+Traceback (most recent call last):
+  File "/home/ashu/.local/lib/python3.10/site-packages/pyrogram/dispatcher.py", line 226, in handler_worker
+    if await handler.check(self.client, parsed_update):
+  File "/home/ashu/.local/lib/python3.10/site-packages/pyromod/listen/listen.py", line 103, in check
+    await self.filters(client, update)
+  File "/home/ashu/.local/lib/python3.10/site-packages/pyrogram/filters.py", line 79, in __call__
+    y = await self.other(client, update)
+  File "/mnt/c/Users/pc/Desktop/save/Txt V2/savex/plugins/force_subs.py", line 12, in not_subscribed
+    user = await client.get_chat_member(Config.FORCE_SUB, message.from_user.id)
+  File "/home/ashu/.local/lib/python3.10/site-packages/pyrogram/methods/chats/get_chat_member.py", line 80, in get_chat_member
+    r = await self.invoke(
+  File "/home/ashu/.local/lib/python3.10/site-packages/pyrogram/methods/advanced/invoke.py", line 79, in invoke
+    r = await self.session.invoke(
+  File "/home/ashu/.local/lib/python3.10/site-packages/pyrogram/session/session.py", line 389, in invoke
+    return await self.send(query, timeout=timeout)
+  File "/home/ashu/.local/lib/python3.10/site-packages/pyrogram/session/session.py", line 357, in send
+    RPCError.raise_it(result, type(data))
+  File "/home/ashu/.local/lib/python3.10/site-packages/pyrogram/errors/rpc_error.py", line 91, in raise_it
+    raise getattr(
+pyrogram.errors.exceptions.bad_request_400.ChatAdminRequired: Telegram says: [400 CHAT_ADMIN_REQUIRED] - The method requires chat admin privileges (caused by "channels.GetParticipant")
+12-Jun-24 22:44:29 - ERROR - Telegram says: [400 CHAT_ADMIN_REQUIRED] - The method requires chat admin privileges (caused by "channels.GetParticipant") [dispatcher.py:229]
+Traceback (most recent call last):
+  File "/home/ashu/.local/lib/python3.10/site-packages/pyrogram/dispatcher.py", line 226, in handler_worker
+    if await handler.check(self.client, parsed_update):
+  File "/home/ashu/.local/lib/python3.10/site-packages/pyromod/listen/listen.py", line 103, in check
+    await self.filters(client, update)
+  File "/home/ashu/.local/lib/python3.10/site-packages/pyrogram/filters.py", line 79, in __call__
+    y = await self.other(client, update)
+  File "/mnt/c/Users/pc/Desktop/save/Txt V2/savex/plugins/force_subs.py", line 12, in not_subscribed
+    user = await client.get_chat_member(Config.FORCE_SUB, message.from_user.id)
+  File "/home/ashu/.local/lib/python3.10/site-packages/pyrogram/methods/chats/get_chat_member.py", line 80, in get_chat_member
+    r = await self.invoke(
+  File "/home/ashu/.local/lib/python3.10/site-packages/pyrogram/methods/advanced/invoke.py", line 79, in invoke
+    r = await self.session.invoke(
+  File "/home/ashu/.local/lib/python3.10/site-packages/pyrogram/session/session.py", line 389, in invoke
+    return await self.send(query, timeout=timeout)
+  File "/home/ashu/.local/lib/python3.10/site-packages/pyrogram/session/session.py", line 357, in send
+    RPCError.raise_it(result, type(data))
+  File "/home/ashu/.local/lib/python3.10/site-packages/pyrogram/errors/rpc_error.py", line 91, in raise_it
+    raise getattr(
+pyrogram.errors.exceptions.bad_request_400.ChatAdminRequired: Telegram says: [400 CHAT_ADMIN_REQUIRED] - The method requires chat admin privileges (caused by "channels.GetParticipant")
+12-Jun-24 22:44:36 - ERROR - 6679365516 : Telegram says: [400 USER_IS_BOT] - A bot cannot send messages to other bots or to itself (caused by "messages.SendMessage") [admin_panel.py:99]
+12-Jun-24 22:48:18 - ERROR - Telegram says: [400 CHAT_ADMIN_REQUIRED] - The method requires chat admin privileges (caused by "channels.GetParticipant") [dispatcher.py:229]
+Traceback (most recent call last):
+  File "/home/ashu/.local/lib/python3.10/site-packages/pyrogram/dispatcher.py", line 226, in handler_worker
+    if await handler.check(self.client, parsed_update):
+  File "/home/ashu/.local/lib/python3.10/site-packages/pyromod/listen/listen.py", line 103, in check
+    await self.filters(client, update)
+  File "/home/ashu/.local/lib/python3.10/site-packages/pyrogram/filters.py", line 79, in __call__
+    y = await self.other(client, update)
+  File "/mnt/c/Users/pc/Desktop/save/Txt V2/savex/plugins/force_subs.py", line 12, in not_subscribed
+    user = await client.get_chat_member(Config.FORCE_SUB, message.from_user.id)
+  File "/home/ashu/.local/lib/python3.10/site-packages/pyrogram/methods/chats/get_chat_member.py", line 80, in get_chat_member
+    r = await self.invoke(
+  File "/home/ashu/.local/lib/python3.10/site-packages/pyrogram/methods/advanced/invoke.py", line 79, in invoke
+    r = await self.session.invoke(
+  File "/home/ashu/.local/lib/python3.10/site-packages/pyrogram/session/session.py", line 389, in invoke
+    return await self.send(query, timeout=timeout)
+  File "/home/ashu/.local/lib/python3.10/site-packages/pyrogram/session/session.py", line 357, in send
+    RPCError.raise_it(result, type(data))
+  File "/home/ashu/.local/lib/python3.10/site-packages/pyrogram/errors/rpc_error.py", line 91, in raise_it
+    raise getattr(
+pyrogram.errors.exceptions.bad_request_400.ChatAdminRequired: Telegram says: [400 CHAT_ADMIN_REQUIRED] - The method requires chat admin privileges (caused by "channels.GetParticipant")
+12-Jun-24 22:52:39 - ERROR - Telegram says: [400 CHAT_ADMIN_REQUIRED] - The method requires chat admin privileges (caused by "channels.GetParticipant") [dispatcher.py:229]
+Traceback (most recent call last):
+  File "/home/ashu/.local/lib/python3.10/site-packages/pyrogram/dispatcher.py", line 226, in handler_worker
+    if await handler.check(self.client, parsed_update):
+  File "/home/ashu/.local/lib/python3.10/site-packages/pyromod/listen/listen.py", line 103, in check
+    await self.filters(client, update)
+  File "/home/ashu/.local/lib/python3.10/site-packages/pyrogram/filters.py", line 79, in __call__
+    y = await self.other(client, update)
+  File "/mnt/c/Users/pc/Desktop/save/Txt V2/savex/plugins/force_subs.py", line 12, in not_subscribed
+    user = await client.get_chat_member(Config.FORCE_SUB, message.from_user.id)
+  File "/home/ashu/.local/lib/python3.10/site-packages/pyrogram/methods/chats/get_chat_member.py", line 80, in get_chat_member
+    r = await self.invoke(
+  File "/home/ashu/.local/lib/python3.10/site-packages/pyrogram/methods/advanced/invoke.py", line 79, in invoke
+    r = await self.session.invoke(
+  File "/home/ashu/.local/lib/python3.10/site-packages/pyrogram/session/session.py", line 389, in invoke
+    return await self.send(query, timeout=timeout)
+  File "/home/ashu/.local/lib/python3.10/site-packages/pyrogram/session/session.py", line 357, in send
+    RPCError.raise_it(result, type(data))
+  File "/home/ashu/.local/lib/python3.10/site-packages/pyrogram/errors/rpc_error.py", line 91, in raise_it
+    raise getattr(
+pyrogram.errors.exceptions.bad_request_400.ChatAdminRequired: Telegram says: [400 CHAT_ADMIN_REQUIRED] - The method requires chat admin privileges (caused by "channels.GetParticipant")
+12-Jun-24 23:07:03 - ERROR - Database.add_user() takes 2 positional arguments but 3 were given [dispatcher.py:229]
+Traceback (most recent call last):
+  File "/home/ashu/.local/lib/python3.10/site-packages/pyrogram/dispatcher.py", line 226, in handler_worker
+    if await handler.check(self.client, parsed_update):
+  File "/home/ashu/.local/lib/python3.10/site-packages/pyromod/listen/listen.py", line 103, in check
+    await self.filters(client, update)
+  File "/home/ashu/.local/lib/python3.10/site-packages/pyrogram/filters.py", line 79, in __call__
+    y = await self.other(client, update)
+  File "/mnt/c/Users/pc/Desktop/save/Txt V2/savex/plugins/force_subs.py", line 8, in not_subscribed
+    await AshutoshGoswami24.add_user(client, message)
+TypeError: Database.add_user() takes 2 positional arguments but 3 were given
+12-Jun-24 23:10:59 - ERROR - Database.add_user() takes 2 positional arguments but 3 were given [dispatcher.py:229]
+Traceback (most recent call last):
+  File "/home/ashu/.local/lib/python3.10/site-packages/pyrogram/dispatcher.py", line 226, in handler_worker
+    if await handler.check(self.client, parsed_update):
+  File "/home/ashu/.local/lib/python3.10/site-packages/pyromod/listen/listen.py", line 103, in check
+    await self.filters(client, update)
+  File "/home/ashu/.local/lib/python3.10/site-packages/pyrogram/filters.py", line 79, in __call__
+    y = await self.other(client, update)
+  File "/mnt/c/Users/pc/Desktop/save/Txt V2/savex/plugins/force_subs.py", line 8, in not_subscribed
+    await AshutoshGoswami24.add_user(client, message)
+TypeError: Database.add_user() takes 2 positional arguments but 3 were given
+12-Jun-24 23:10:59 - ERROR - 'Database' object has no attribute 'get_remaining_time' [dispatcher.py:253]
+Traceback (most recent call last):
+  File "/home/ashu/.local/lib/python3.10/site-packages/pyrogram/dispatcher.py", line 240, in handler_worker
+    await handler.callback(self.client, *args)
+  File "/home/ashu/.local/lib/python3.10/site-packages/pyromod/listen/listen.py", line 93, in resolve_listener
+    await self.user_callback(client, message, *args)
+  File "/mnt/c/Users/pc/Desktop/save/Txt V2/savex/plugins/start_&_cb.py", line 137, in check_plan
+    remaining_time = await AshutoshGoswami24.get_remaining_time(user_id)
+AttributeError: 'Database' object has no attribute 'get_remaining_time'
+12-Jun-24 23:11:08 - ERROR - Database.add_user() takes 2 positional arguments but 3 were given [dispatcher.py:229]
+Traceback (most recent call last):
+  File "/home/ashu/.local/lib/python3.10/site-packages/pyrogram/dispatcher.py", line 226, in handler_worker
+    if await handler.check(self.client, parsed_update):
+  File "/home/ashu/.local/lib/python3.10/site-packages/pyromod/listen/listen.py", line 103, in check
+    await self.filters(client, update)
+  File "/home/ashu/.local/lib/python3.10/site-packages/pyrogram/filters.py", line 79, in __call__
+    y = await self.other(client, update)
+  File "/mnt/c/Users/pc/Desktop/save/Txt V2/savex/plugins/force_subs.py", line 8, in not_subscribed
+    await AshutoshGoswami24.add_user(client, message)
+TypeError: Database.add_user() takes 2 positional arguments but 3 were given
+12-Jun-24 23:11:08 - ERROR - 'Database' object has no attribute 'get_remaining_time' [dispatcher.py:253]
+Traceback (most recent call last):
+  File "/home/ashu/.local/lib/python3.10/site-packages/pyrogram/dispatcher.py", line 240, in handler_worker
+    await handler.callback(self.client, *args)
+  File "/home/ashu/.local/lib/python3.10/site-packages/pyromod/listen/listen.py", line 93, in resolve_listener
+    await self.user_callback(client, message, *args)
+  File "/mnt/c/Users/pc/Desktop/save/Txt V2/savex/plugins/start_&_cb.py", line 137, in check_plan
+    remaining_time = await AshutoshGoswami24.get_remaining_time(user_id)
+AttributeError: 'Database' object has no attribute 'get_remaining_time'
+12-Jun-24 23:16:35 - ERROR - Database.add_user() takes 2 positional arguments but 3 were given [dispatcher.py:229]
+Traceback (most recent call last):
+  File "/home/ashu/.local/lib/python3.10/site-packages/pyrogram/dispatcher.py", line 226, in handler_worker
+    if await handler.check(self.client, parsed_update):
+  File "/home/ashu/.local/lib/python3.10/site-packages/pyromod/listen/listen.py", line 103, in check
+    await self.filters(client, update)
+  File "/home/ashu/.local/lib/python3.10/site-packages/pyrogram/filters.py", line 79, in __call__
+    y = await self.other(client, update)
+  File "/mnt/c/Users/pc/Desktop/save/Txt V2/savex/plugins/force_subs.py", line 8, in not_subscribed
+    await AshutoshGoswami24.add_user(client, message)
+TypeError: Database.add_user() takes 2 positional arguments but 3 were given
+12-Jun-24 23:16:35 - ERROR - 'Database' object has no attribute 'get_remaining_time' [dispatcher.py:253]
+Traceback (most recent call last):
+  File "/home/ashu/.local/lib/python3.10/site-packages/pyrogram/dispatcher.py", line 240, in handler_worker
+    await handler.callback(self.client, *args)
+  File "/home/ashu/.local/lib/python3.10/site-packages/pyromod/listen/listen.py", line 93, in resolve_listener
+    await self.user_callback(client, message, *args)
+  File "/mnt/c/Users/pc/Desktop/save/Txt V2/savex/plugins/start_&_cb.py", line 137, in check_plan
+    remaining_time = await AshutoshGoswami24.get_remaining_time(user_id)
+AttributeError: 'Database' object has no attribute 'get_remaining_time'
+12-Jun-24 23:16:35 - ERROR - Database.add_user() takes 2 positional arguments but 3 were given [dispatcher.py:229]
+Traceback (most recent call last):
+  File "/home/ashu/.local/lib/python3.10/site-packages/pyrogram/dispatcher.py", line 226, in handler_worker
+    if await handler.check(self.client, parsed_update):
+  File "/home/ashu/.local/lib/python3.10/site-packages/pyromod/listen/listen.py", line 103, in check
+    await self.filters(client, update)
+  File "/home/ashu/.local/lib/python3.10/site-packages/pyrogram/filters.py", line 79, in __call__
+    y = await self.other(client, update)
+  File "/mnt/c/Users/pc/Desktop/save/Txt V2/savex/plugins/force_subs.py", line 8, in not_subscribed
+    await AshutoshGoswami24.add_user(client, message)
+TypeError: Database.add_user() takes 2 positional arguments but 3 were given
+12-Jun-24 23:16:35 - ERROR - 'Database' object has no attribute 'get_remaining_time' [dispatcher.py:253]
+Traceback (most recent call last):
+  File "/home/ashu/.local/lib/python3.10/site-packages/pyrogram/dispatcher.py", line 240, in handler_worker
+    await handler.callback(self.client, *args)
+  File "/home/ashu/.local/lib/python3.10/site-packages/pyromod/listen/listen.py", line 93, in resolve_listener
+    await self.user_callback(client, message, *args)
+  File "/mnt/c/Users/pc/Desktop/save/Txt V2/savex/plugins/start_&_cb.py", line 137, in check_plan
+    remaining_time = await AshutoshGoswami24.get_remaining_time(user_id)
+AttributeError: 'Database' object has no attribute 'get_remaining_time'
+12-Jun-24 23:16:38 - ERROR - Database.add_user() takes 2 positional arguments but 3 were given [dispatcher.py:229]
+Traceback (most recent call last):
+  File "/home/ashu/.local/lib/python3.10/site-packages/pyrogram/dispatcher.py", line 226, in handler_worker
+    if await handler.check(self.client, parsed_update):
+  File "/home/ashu/.local/lib/python3.10/site-packages/pyromod/listen/listen.py", line 103, in check
+    await self.filters(client, update)
+  File "/home/ashu/.local/lib/python3.10/site-packages/pyrogram/filters.py", line 79, in __call__
+    y = await self.other(client, update)
+  File "/mnt/c/Users/pc/Desktop/save/Txt V2/savex/plugins/force_subs.py", line 8, in not_subscribed
+    await AshutoshGoswami24.add_user(client, message)
+TypeError: Database.add_user() takes 2 positional arguments but 3 were given
+12-Jun-24 23:16:38 - ERROR - 'Database' object has no attribute 'get_remaining_time' [dispatcher.py:253]
+Traceback (most recent call last):
+  File "/home/ashu/.local/lib/python3.10/site-packages/pyrogram/dispatcher.py", line 240, in handler_worker
+    await handler.callback(self.client, *args)
+  File "/home/ashu/.local/lib/python3.10/site-packages/pyromod/listen/listen.py", line 93, in resolve_listener
+    await self.user_callback(client, message, *args)
+  File "/mnt/c/Users/pc/Desktop/save/Txt V2/savex/plugins/start_&_cb.py", line 137, in check_plan
+    remaining_time = await AshutoshGoswami24.get_remaining_time(user_id)
+AttributeError: 'Database' object has no attribute 'get_remaining_time'
+12-Jun-24 23:19:23 - ERROR - Database.add_user() takes 2 positional arguments but 3 were given [dispatcher.py:229]
+Traceback (most recent call last):
+  File "/home/ashu/.local/lib/python3.10/site-packages/pyrogram/dispatcher.py", line 226, in handler_worker
+    if await handler.check(self.client, parsed_update):
+  File "/home/ashu/.local/lib/python3.10/site-packages/pyromod/listen/listen.py", line 103, in check
+    await self.filters(client, update)
+  File "/home/ashu/.local/lib/python3.10/site-packages/pyrogram/filters.py", line 79, in __call__
+    y = await self.other(client, update)
+  File "/mnt/c/Users/pc/Desktop/save/Txt V2/savex/plugins/force_subs.py", line 8, in not_subscribed
+    await AshutoshGoswami24.add_user(client, message)
+TypeError: Database.add_user() takes 2 positional arguments but 3 were given
+12-Jun-24 23:19:23 - ERROR - 'Database' object has no attribute 'get_remaining_time' [dispatcher.py:253]
+Traceback (most recent call last):
+  File "/home/ashu/.local/lib/python3.10/site-packages/pyrogram/dispatcher.py", line 240, in handler_worker
+    await handler.callback(self.client, *args)
+  File "/home/ashu/.local/lib/python3.10/site-packages/pyromod/listen/listen.py", line 93, in resolve_listener
+    await self.user_callback(client, message, *args)
+  File "/mnt/c/Users/pc/Desktop/save/Txt V2/savex/plugins/start_&_cb.py", line 137, in check_plan
+    remaining_time = await AshutoshGoswami24.get_remaining_time(user_id)
+AttributeError: 'Database' object has no attribute 'get_remaining_time'
+12-Jun-24 23:19:25 - ERROR - Database.add_user() takes 2 positional arguments but 3 were given [dispatcher.py:229]
+Traceback (most recent call last):
+  File "/home/ashu/.local/lib/python3.10/site-packages/pyrogram/dispatcher.py", line 226, in handler_worker
+    if await handler.check(self.client, parsed_update):
+  File "/home/ashu/.local/lib/python3.10/site-packages/pyromod/listen/listen.py", line 103, in check
+    await self.filters(client, update)
+  File "/home/ashu/.local/lib/python3.10/site-packages/pyrogram/filters.py", line 79, in __call__
+    y = await self.other(client, update)
+  File "/mnt/c/Users/pc/Desktop/save/Txt V2/savex/plugins/force_subs.py", line 8, in not_subscribed
+    await AshutoshGoswami24.add_user(client, message)
+TypeError: Database.add_user() takes 2 positional arguments but 3 were given
+12-Jun-24 23:19:25 - ERROR - 'Database' object has no attribute 'get_remaining_time' [dispatcher.py:253]
+Traceback (most recent call last):
+  File "/home/ashu/.local/lib/python3.10/site-packages/pyrogram/dispatcher.py", line 240, in handler_worker
+    await handler.callback(self.client, *args)
+  File "/home/ashu/.local/lib/python3.10/site-packages/pyromod/listen/listen.py", line 93, in resolve_listener
+    await self.user_callback(client, message, *args)
+  File "/mnt/c/Users/pc/Desktop/save/Txt V2/savex/plugins/start_&_cb.py", line 137, in check_plan
+    remaining_time = await AshutoshGoswami24.get_remaining_time(user_id)
+AttributeError: 'Database' object has no attribute 'get_remaining_time'
+12-Jun-24 23:19:39 - ERROR - 'Database' object has no attribute 'get_prime_users' [dispatcher.py:253]
+Traceback (most recent call last):
+  File "/home/ashu/.local/lib/python3.10/site-packages/pyrogram/dispatcher.py", line 240, in handler_worker
+    await handler.callback(self.client, *args)
+  File "/home/ashu/.local/lib/python3.10/site-packages/pyromod/listen/listen.py", line 93, in resolve_listener
+    await self.user_callback(client, message, *args)
+  File "/mnt/c/Users/pc/Desktop/save/Txt V2/savex/plugins/admin_panel.py", line 22, in show_prime_user
+    prime_users = await AshutoshGoswami24.get_prime_users()
+AttributeError: 'Database' object has no attribute 'get_prime_users'
+12-Jun-24 23:23:04 - ERROR - Database.add_user() takes 2 positional arguments but 3 were given [dispatcher.py:229]
+Traceback (most recent call last):
+  File "/home/ashu/.local/lib/python3.10/site-packages/pyrogram/dispatcher.py", line 226, in handler_worker
+    if await handler.check(self.client, parsed_update):
+  File "/home/ashu/.local/lib/python3.10/site-packages/pyromod/listen/listen.py", line 103, in check
+    await self.filters(client, update)
+  File "/home/ashu/.local/lib/python3.10/site-packages/pyrogram/filters.py", line 79, in __call__
+    y = await self.other(client, update)
+  File "/mnt/c/Users/pc/Desktop/save/Txt V2/savex/plugins/force_subs.py", line 8, in not_subscribed
+    await AshutoshGoswami24.add_user(client, message)
+TypeError: Database.add_user() takes 2 positional arguments but 3 were given
+12-Jun-24 23:23:04 - ERROR - name 'AshutoshGoswami24is_prime_user' is not defined [dispatcher.py:229]
+Traceback (most recent call last):
+  File "/home/ashu/.local/lib/python3.10/site-packages/pyrogram/dispatcher.py", line 226, in handler_worker
+    if await handler.check(self.client, parsed_update):
+  File "/home/ashu/.local/lib/python3.10/site-packages/pyromod/listen/listen.py", line 103, in check
+    await self.filters(client, update)
+  File "/home/ashu/.local/lib/python3.10/site-packages/pyrogram/filters.py", line 79, in __call__
+    y = await self.other(client, update)
+  File "/home/ashu/.local/lib/python3.10/site-packages/pyrogram/filters.py", line 110, in __call__
+    y = await self.other(client, update)
+  File "/mnt/c/Users/pc/Desktop/save/Txt V2/savex/plugins/txt/txt.py", line 24, in is_prime_user_filter
+    return await AshutoshGoswami24is_prime_user(message.from_user.id)
+NameError: name 'AshutoshGoswami24is_prime_user' is not defined
+12-Jun-24 23:23:07 - ERROR - Database.add_user() takes 2 positional arguments but 3 were given [dispatcher.py:229]
+Traceback (most recent call last):
+  File "/home/ashu/.local/lib/python3.10/site-packages/pyrogram/dispatcher.py", line 226, in handler_worker
+    if await handler.check(self.client, parsed_update):
+  File "/home/ashu/.local/lib/python3.10/site-packages/pyromod/listen/listen.py", line 103, in check
+    await self.filters(client, update)
+  File "/home/ashu/.local/lib/python3.10/site-packages/pyrogram/filters.py", line 79, in __call__
+    y = await self.other(client, update)
+  File "/mnt/c/Users/pc/Desktop/save/Txt V2/savex/plugins/force_subs.py", line 8, in not_subscribed
+    await AshutoshGoswami24.add_user(client, message)
+TypeError: Database.add_user() takes 2 positional arguments but 3 were given
+12-Jun-24 23:23:07 - ERROR - name 'AshutoshGoswami24is_prime_user' is not defined [dispatcher.py:229]
+Traceback (most recent call last):
+  File "/home/ashu/.local/lib/python3.10/site-packages/pyrogram/dispatcher.py", line 226, in handler_worker
+    if await handler.check(self.client, parsed_update):
+  File "/home/ashu/.local/lib/python3.10/site-packages/pyromod/listen/listen.py", line 103, in check
+    await self.filters(client, update)
+  File "/home/ashu/.local/lib/python3.10/site-packages/pyrogram/filters.py", line 79, in __call__
+    y = await self.other(client, update)
+  File "/home/ashu/.local/lib/python3.10/site-packages/pyrogram/filters.py", line 110, in __call__
+    y = await self.other(client, update)
+  File "/mnt/c/Users/pc/Desktop/save/Txt V2/savex/plugins/txt/txt.py", line 24, in is_prime_user_filter
+    return await AshutoshGoswami24is_prime_user(message.from_user.id)
+NameError: name 'AshutoshGoswami24is_prime_user' is not defined
+12-Jun-24 23:23:09 - ERROR - Database.add_user() takes 2 positional arguments but 3 were given [dispatcher.py:229]
+Traceback (most recent call last):
+  File "/home/ashu/.local/lib/python3.10/site-packages/pyrogram/dispatcher.py", line 226, in handler_worker
+    if await handler.check(self.client, parsed_update):
+  File "/home/ashu/.local/lib/python3.10/site-packages/pyromod/listen/listen.py", line 103, in check
+    await self.filters(client, update)
+  File "/home/ashu/.local/lib/python3.10/site-packages/pyrogram/filters.py", line 79, in __call__
+    y = await self.other(client, update)
+  File "/mnt/c/Users/pc/Desktop/save/Txt V2/savex/plugins/force_subs.py", line 8, in not_subscribed
+    await AshutoshGoswami24.add_user(client, message)
+TypeError: Database.add_user() takes 2 positional arguments but 3 were given
+12-Jun-24 23:23:09 - ERROR - name 'AshutoshGoswami24is_prime_user' is not defined [dispatcher.py:229]
+Traceback (most recent call last):
+  File "/home/ashu/.local/lib/python3.10/site-packages/pyrogram/dispatcher.py", line 226, in handler_worker
+    if await handler.check(self.client, parsed_update):
+  File "/home/ashu/.local/lib/python3.10/site-packages/pyromod/listen/listen.py", line 103, in check
+    await self.filters(client, update)
+  File "/home/ashu/.local/lib/python3.10/site-packages/pyrogram/filters.py", line 79, in __call__
+    y = await self.other(client, update)
+  File "/home/ashu/.local/lib/python3.10/site-packages/pyrogram/filters.py", line 110, in __call__
+    y = await self.other(client, update)
+  File "/mnt/c/Users/pc/Desktop/save/Txt V2/savex/plugins/txt/txt.py", line 24, in is_prime_user_filter
+    return await AshutoshGoswami24is_prime_user(message.from_user.id)
+NameError: name 'AshutoshGoswami24is_prime_user' is not defined
+12-Jun-24 23:23:11 - ERROR - Database.add_user() takes 2 positional arguments but 3 were given [dispatcher.py:229]
+Traceback (most recent call last):
+  File "/home/ashu/.local/lib/python3.10/site-packages/pyrogram/dispatcher.py", line 226, in handler_worker
+    if await handler.check(self.client, parsed_update):
+  File "/home/ashu/.local/lib/python3.10/site-packages/pyromod/listen/listen.py", line 103, in check
+    await self.filters(client, update)
+  File "/home/ashu/.local/lib/python3.10/site-packages/pyrogram/filters.py", line 79, in __call__
+    y = await self.other(client, update)
+  File "/mnt/c/Users/pc/Desktop/save/Txt V2/savex/plugins/force_subs.py", line 8, in not_subscribed
+    await AshutoshGoswami24.add_user(client, message)
+TypeError: Database.add_user() takes 2 positional arguments but 3 were given
+12-Jun-24 23:23:11 - ERROR - name 'AshutoshGoswami24is_prime_user' is not defined [dispatcher.py:229]
+Traceback (most recent call last):
+  File "/home/ashu/.local/lib/python3.10/site-packages/pyrogram/dispatcher.py", line 226, in handler_worker
+    if await handler.check(self.client, parsed_update):
+  File "/home/ashu/.local/lib/python3.10/site-packages/pyromod/listen/listen.py", line 103, in check
+    await self.filters(client, update)
+  File "/home/ashu/.local/lib/python3.10/site-packages/pyrogram/filters.py", line 79, in __call__
+    y = await self.other(client, update)
+  File "/home/ashu/.local/lib/python3.10/site-packages/pyrogram/filters.py", line 110, in __call__
+    y = await self.other(client, update)
+  File "/mnt/c/Users/pc/Desktop/save/Txt V2/savex/plugins/txt/txt.py", line 24, in is_prime_user_filter
+    return await AshutoshGoswami24is_prime_user(message.from_user.id)
+NameError: name 'AshutoshGoswami24is_prime_user' is not defined
+12-Jun-24 23:24:39 - ERROR - Database.add_user() takes 2 positional arguments but 3 were given [dispatcher.py:229]
+Traceback (most recent call last):
+  File "/home/ashu/.local/lib/python3.10/site-packages/pyrogram/dispatcher.py", line 226, in handler_worker
+    if await handler.check(self.client, parsed_update):
+  File "/home/ashu/.local/lib/python3.10/site-packages/pyromod/listen/listen.py", line 103, in check
+    await self.filters(client, update)
+  File "/home/ashu/.local/lib/python3.10/site-packages/pyrogram/filters.py", line 79, in __call__
+    y = await self.other(client, update)
+  File "/mnt/c/Users/pc/Desktop/save/Txt V2/savex/plugins/force_subs.py", line 8, in not_subscribed
+    await AshutoshGoswami24.add_user(client, message)
+TypeError: Database.add_user() takes 2 positional arguments but 3 were given
+12-Jun-24 23:24:44 - ERROR - This message doesn't contain any downloadable media [dispatcher.py:253]
+Traceback (most recent call last):
+  File "/home/ashu/.local/lib/python3.10/site-packages/pyrogram/dispatcher.py", line 240, in handler_worker
+    await handler.callback(self.client, *args)
+  File "/home/ashu/.local/lib/python3.10/site-packages/pyromod/listen/listen.py", line 93, in resolve_listener
+    await self.user_callback(client, message, *args)
+  File "/mnt/c/Users/pc/Desktop/save/Txt V2/savex/plugins/txt/txt.py", line 33, in account_login
+    x = await input.download()
+  File "/home/ashu/.local/lib/python3.10/site-packages/pyrogram/types/messages_and_media/message.py", line 3478, in download
+    return await self._client.download_media(
+  File "/home/ashu/.local/lib/python3.10/site-packages/pyrogram/methods/messages/download_media.py", line 132, in download_media
+    raise ValueError("This message doesn't contain any downloadable media")
+ValueError: This message doesn't contain any downloadable media
+12-Jun-24 23:24:54 - ERROR - Database.add_user() takes 2 positional arguments but 3 were given [dispatcher.py:229]
+Traceback (most recent call last):
+  File "/home/ashu/.local/lib/python3.10/site-packages/pyrogram/dispatcher.py", line 226, in handler_worker
+    if await handler.check(self.client, parsed_update):
+  File "/home/ashu/.local/lib/python3.10/site-packages/pyromod/listen/listen.py", line 103, in check
+    await self.filters(client, update)
+  File "/home/ashu/.local/lib/python3.10/site-packages/pyrogram/filters.py", line 79, in __call__
+    y = await self.other(client, update)
+  File "/mnt/c/Users/pc/Desktop/save/Txt V2/savex/plugins/force_subs.py", line 8, in not_subscribed
+    await AshutoshGoswami24.add_user(client, message)
+TypeError: Database.add_user() takes 2 positional arguments but 3 were given
+12-Jun-24 23:24:58 - ERROR - This message doesn't contain any downloadable media [dispatcher.py:253]
+Traceback (most recent call last):
+  File "/home/ashu/.local/lib/python3.10/site-packages/pyrogram/dispatcher.py", line 240, in handler_worker
+    await handler.callback(self.client, *args)
+  File "/home/ashu/.local/lib/python3.10/site-packages/pyromod/listen/listen.py", line 93, in resolve_listener
+    await self.user_callback(client, message, *args)
+  File "/mnt/c/Users/pc/Desktop/save/Txt V2/savex/plugins/txt/txt.py", line 33, in account_login
+    x = await input.download()
+  File "/home/ashu/.local/lib/python3.10/site-packages/pyrogram/types/messages_and_media/message.py", line 3478, in download
+    return await self._client.download_media(
+  File "/home/ashu/.local/lib/python3.10/site-packages/pyrogram/methods/messages/download_media.py", line 132, in download_media
+    raise ValueError("This message doesn't contain any downloadable media")
+ValueError: This message doesn't contain any downloadable media
+12-Jun-24 23:25:48 - ERROR - Database.add_user() takes 2 positional arguments but 3 were given [dispatcher.py:229]
+Traceback (most recent call last):
+  File "/home/ashu/.local/lib/python3.10/site-packages/pyrogram/dispatcher.py", line 226, in handler_worker
+    if await handler.check(self.client, parsed_update):
+  File "/home/ashu/.local/lib/python3.10/site-packages/pyromod/listen/listen.py", line 103, in check
+    await self.filters(client, update)
+  File "/home/ashu/.local/lib/python3.10/site-packages/pyrogram/filters.py", line 79, in __call__
+    y = await self.other(client, update)
+  File "/mnt/c/Users/pc/Desktop/save/Txt V2/savex/plugins/force_subs.py", line 8, in not_subscribed
+    await AshutoshGoswami24.add_user(client, message)
+TypeError: Database.add_user() takes 2 positional arguments but 3 were given
+12-Jun-24 23:25:55 - ERROR - Database.add_user() takes 2 positional arguments but 3 were given [dispatcher.py:229]
+Traceback (most recent call last):
+  File "/home/ashu/.local/lib/python3.10/site-packages/pyrogram/dispatcher.py", line 226, in handler_worker
+    if await handler.check(self.client, parsed_update):
+  File "/home/ashu/.local/lib/python3.10/site-packages/pyromod/listen/listen.py", line 103, in check
+    await self.filters(client, update)
+  File "/home/ashu/.local/lib/python3.10/site-packages/pyrogram/filters.py", line 79, in __call__
+    y = await self.other(client, update)
+  File "/mnt/c/Users/pc/Desktop/save/Txt V2/savex/plugins/force_subs.py", line 8, in not_subscribed
+    await AshutoshGoswami24.add_user(client, message)
+TypeError: Database.add_user() takes 2 positional arguments but 3 were given
+12-Jun-24 23:28:20 - ERROR - Database.add_user() takes 2 positional arguments but 3 were given [dispatcher.py:229]
+Traceback (most recent call last):
+  File "/home/ashu/.local/lib/python3.10/site-packages/pyrogram/dispatcher.py", line 226, in handler_worker
+    if await handler.check(self.client, parsed_update):
+  File "/home/ashu/.local/lib/python3.10/site-packages/pyromod/listen/listen.py", line 103, in check
+    await self.filters(client, update)
+  File "/home/ashu/.local/lib/python3.10/site-packages/pyrogram/filters.py", line 79, in __call__
+    y = await self.other(client, update)
+  File "/mnt/c/Users/pc/Desktop/save/Txt V2/savex/plugins/force_subs.py", line 8, in not_subscribed
+    await AshutoshGoswami24.add_user(client, message)
+TypeError: Database.add_user() takes 2 positional arguments but 3 were given
+12-Jun-24 23:29:49 - ERROR - Database.add_user() takes 2 positional arguments but 3 were given [dispatcher.py:229]
+Traceback (most recent call last):
+  File "/home/ashu/.local/lib/python3.10/site-packages/pyrogram/dispatcher.py", line 226, in handler_worker
+    if await handler.check(self.client, parsed_update):
+  File "/home/ashu/.local/lib/python3.10/site-packages/pyromod/listen/listen.py", line 103, in check
+    await self.filters(client, update)
+  File "/home/ashu/.local/lib/python3.10/site-packages/pyrogram/filters.py", line 79, in __call__
+    y = await self.other(client, update)
+  File "/mnt/c/Users/pc/Desktop/save/Txt V2/savex/plugins/force_subs.py", line 8, in not_subscribed
+    await AshutoshGoswami24.add_user(client, message)
+TypeError: Database.add_user() takes 2 positional arguments but 3 were given
+12-Jun-24 23:29:49 - ERROR - object NoneType can't be used in 'await' expression [dispatcher.py:253]
+Traceback (most recent call last):
+  File "/home/ashu/.local/lib/python3.10/site-packages/pyrogram/dispatcher.py", line 240, in handler_worker
+    await handler.callback(self.client, *args)
+  File "/home/ashu/.local/lib/python3.10/site-packages/pyromod/listen/listen.py", line 93, in resolve_listener
+    await self.user_callback(client, message, *args)
+TypeError: object NoneType can't be used in 'await' expression
+12-Jun-24 23:29:52 - ERROR - Database.add_user() takes 2 positional arguments but 3 were given [dispatcher.py:229]
+Traceback (most recent call last):
+  File "/home/ashu/.local/lib/python3.10/site-packages/pyrogram/dispatcher.py", line 226, in handler_worker
+    if await handler.check(self.client, parsed_update):
+  File "/home/ashu/.local/lib/python3.10/site-packages/pyromod/listen/listen.py", line 103, in check
+    await self.filters(client, update)
+  File "/home/ashu/.local/lib/python3.10/site-packages/pyrogram/filters.py", line 79, in __call__
+    y = await self.other(client, update)
+  File "/mnt/c/Users/pc/Desktop/save/Txt V2/savex/plugins/force_subs.py", line 8, in not_subscribed
+    await AshutoshGoswami24.add_user(client, message)
+TypeError: Database.add_user() takes 2 positional arguments but 3 were given
+12-Jun-24 23:29:52 - ERROR - object NoneType can't be used in 'await' expression [dispatcher.py:253]
+Traceback (most recent call last):
+  File "/home/ashu/.local/lib/python3.10/site-packages/pyrogram/dispatcher.py", line 240, in handler_worker
+    await handler.callback(self.client, *args)
+  File "/home/ashu/.local/lib/python3.10/site-packages/pyromod/listen/listen.py", line 93, in resolve_listener
+    await self.user_callback(client, message, *args)
+TypeError: object NoneType can't be used in 'await' expression
+12-Jun-24 23:30:00 - ERROR - Database.add_user() takes 2 positional arguments but 3 were given [dispatcher.py:229]
+Traceback (most recent call last):
+  File "/home/ashu/.local/lib/python3.10/site-packages/pyrogram/dispatcher.py", line 226, in handler_worker
+    if await handler.check(self.client, parsed_update):
+  File "/home/ashu/.local/lib/python3.10/site-packages/pyromod/listen/listen.py", line 103, in check
+    await self.filters(client, update)
+  File "/home/ashu/.local/lib/python3.10/site-packages/pyrogram/filters.py", line 79, in __call__
+    y = await self.other(client, update)
+  File "/mnt/c/Users/pc/Desktop/save/Txt V2/savex/plugins/force_subs.py", line 8, in not_subscribed
+    await AshutoshGoswami24.add_user(client, message)
+TypeError: Database.add_user() takes 2 positional arguments but 3 were given
+12-Jun-24 23:30:00 - ERROR - object NoneType can't be used in 'await' expression [dispatcher.py:253]
+Traceback (most recent call last):
+  File "/home/ashu/.local/lib/python3.10/site-packages/pyrogram/dispatcher.py", line 240, in handler_worker
+    await handler.callback(self.client, *args)
+  File "/home/ashu/.local/lib/python3.10/site-packages/pyromod/listen/listen.py", line 93, in resolve_listener
+    await self.user_callback(client, message, *args)
+TypeError: object NoneType can't be used in 'await' expression
+12-Jun-24 23:30:20 - ERROR - Database.add_user() takes 2 positional arguments but 3 were given [dispatcher.py:229]
+Traceback (most recent call last):
+  File "/home/ashu/.local/lib/python3.10/site-packages/pyrogram/dispatcher.py", line 226, in handler_worker
+    if await handler.check(self.client, parsed_update):
+  File "/home/ashu/.local/lib/python3.10/site-packages/pyromod/listen/listen.py", line 103, in check
+    await self.filters(client, update)
+  File "/home/ashu/.local/lib/python3.10/site-packages/pyrogram/filters.py", line 79, in __call__
+    y = await self.other(client, update)
+  File "/mnt/c/Users/pc/Desktop/save/Txt V2/savex/plugins/force_subs.py", line 8, in not_subscribed
+    await AshutoshGoswami24.add_user(client, message)
+TypeError: Database.add_user() takes 2 positional arguments but 3 were given
+12-Jun-24 23:30:20 - ERROR - object NoneType can't be used in 'await' expression [dispatcher.py:253]
+Traceback (most recent call last):
+  File "/home/ashu/.local/lib/python3.10/site-packages/pyrogram/dispatcher.py", line 240, in handler_worker
+    await handler.callback(self.client, *args)
+  File "/home/ashu/.local/lib/python3.10/site-packages/pyromod/listen/listen.py", line 93, in resolve_listener
+    await self.user_callback(client, message, *args)
+TypeError: object NoneType can't be used in 'await' expression
+12-Jun-24 23:32:29 - ERROR - Database.add_user() takes 2 positional arguments but 3 were given [dispatcher.py:229]
+Traceback (most recent call last):
+  File "/home/ashu/.local/lib/python3.10/site-packages/pyrogram/dispatcher.py", line 226, in handler_worker
+    if await handler.check(self.client, parsed_update):
+  File "/home/ashu/.local/lib/python3.10/site-packages/pyromod/listen/listen.py", line 103, in check
+    await self.filters(client, update)
+  File "/home/ashu/.local/lib/python3.10/site-packages/pyrogram/filters.py", line 79, in __call__
+    y = await self.other(client, update)
+  File "/mnt/c/Users/pc/Desktop/save/Txt V2/savex/plugins/force_subs.py", line 8, in not_subscribed
+    await AshutoshGoswami24.add_user(client, message)
+TypeError: Database.add_user() takes 2 positional arguments but 3 were given
+12-Jun-24 23:32:29 - ERROR - object NoneType can't be used in 'await' expression [dispatcher.py:253]
+Traceback (most recent call last):
+  File "/home/ashu/.local/lib/python3.10/site-packages/pyrogram/dispatcher.py", line 240, in handler_worker
+    await handler.callback(self.client, *args)
+  File "/home/ashu/.local/lib/python3.10/site-packages/pyromod/listen/listen.py", line 93, in resolve_listener
+    await self.user_callback(client, message, *args)
+TypeError: object NoneType can't be used in 'await' expression
+12-Jun-24 23:32:57 - ERROR - Database.add_user() takes 2 positional arguments but 3 were given [dispatcher.py:229]
+Traceback (most recent call last):
+  File "/home/ashu/.local/lib/python3.10/site-packages/pyrogram/dispatcher.py", line 226, in handler_worker
+    if await handler.check(self.client, parsed_update):
+  File "/home/ashu/.local/lib/python3.10/site-packages/pyromod/listen/listen.py", line 103, in check
+    await self.filters(client, update)
+  File "/home/ashu/.local/lib/python3.10/site-packages/pyrogram/filters.py", line 79, in __call__
+    y = await self.other(client, update)
+  File "/mnt/c/Users/pc/Desktop/save/Txt V2/savex/plugins/force_subs.py", line 8, in not_subscribed
+    await AshutoshGoswami24.add_user(client, message)
+TypeError: Database.add_user() takes 2 positional arguments but 3 were given
+12-Jun-24 23:33:10 - ERROR - Database.add_user() takes 2 positional arguments but 3 were given [dispatcher.py:229]
+Traceback (most recent call last):
+  File "/home/ashu/.local/lib/python3.10/site-packages/pyrogram/dispatcher.py", line 226, in handler_worker
+    if await handler.check(self.client, parsed_update):
+  File "/home/ashu/.local/lib/python3.10/site-packages/pyromod/listen/listen.py", line 103, in check
+    await self.filters(client, update)
+  File "/home/ashu/.local/lib/python3.10/site-packages/pyrogram/filters.py", line 79, in __call__
+    y = await self.other(client, update)
+  File "/mnt/c/Users/pc/Desktop/save/Txt V2/savex/plugins/force_subs.py", line 8, in not_subscribed
+    await AshutoshGoswami24.add_user(client, message)
+TypeError: Database.add_user() takes 2 positional arguments but 3 were given
+12-Jun-24 23:33:10 - ERROR - Database.add_user() takes 2 positional arguments but 3 were given [dispatcher.py:253]
+Traceback (most recent call last):
+  File "/home/ashu/.local/lib/python3.10/site-packages/pyrogram/dispatcher.py", line 240, in handler_worker
+    await handler.callback(self.client, *args)
+  File "/home/ashu/.local/lib/python3.10/site-packages/pyromod/listen/listen.py", line 93, in resolve_listener
+    await self.user_callback(client, message, *args)
+  File "/mnt/c/Users/pc/Desktop/save/Txt V2/savex/plugins/start_&_cb.py", line 29, in start
+    await AshutoshGoswami24.add_user(client, message)
+TypeError: Database.add_user() takes 2 positional arguments but 3 were given
+12-Jun-24 23:33:13 - ERROR - Database.add_user() takes 2 positional arguments but 3 were given [dispatcher.py:229]
+Traceback (most recent call last):
+  File "/home/ashu/.local/lib/python3.10/site-packages/pyrogram/dispatcher.py", line 226, in handler_worker
+    if await handler.check(self.client, parsed_update):
+  File "/home/ashu/.local/lib/python3.10/site-packages/pyromod/listen/listen.py", line 103, in check
+    await self.filters(client, update)
+  File "/home/ashu/.local/lib/python3.10/site-packages/pyrogram/filters.py", line 79, in __call__
+    y = await self.other(client, update)
+  File "/mnt/c/Users/pc/Desktop/save/Txt V2/savex/plugins/force_subs.py", line 8, in not_subscribed
+    await AshutoshGoswami24.add_user(client, message)
+TypeError: Database.add_user() takes 2 positional arguments but 3 were given
+12-Jun-24 23:33:13 - ERROR - Database.add_user() takes 2 positional arguments but 3 were given [dispatcher.py:253]
+Traceback (most recent call last):
+  File "/home/ashu/.local/lib/python3.10/site-packages/pyrogram/dispatcher.py", line 240, in handler_worker
+    await handler.callback(self.client, *args)
+  File "/home/ashu/.local/lib/python3.10/site-packages/pyromod/listen/listen.py", line 93, in resolve_listener
+    await self.user_callback(client, message, *args)
+  File "/mnt/c/Users/pc/Desktop/save/Txt V2/savex/plugins/start_&_cb.py", line 29, in start
+    await AshutoshGoswami24.add_user(client, message)
+TypeError: Database.add_user() takes 2 positional arguments but 3 were given
+12-Jun-24 23:33:15 - ERROR - Database.add_user() takes 2 positional arguments but 3 were given [dispatcher.py:229]
+Traceback (most recent call last):
+  File "/home/ashu/.local/lib/python3.10/site-packages/pyrogram/dispatcher.py", line 226, in handler_worker
+    if await handler.check(self.client, parsed_update):
+  File "/home/ashu/.local/lib/python3.10/site-packages/pyromod/listen/listen.py", line 103, in check
+    await self.filters(client, update)
+  File "/home/ashu/.local/lib/python3.10/site-packages/pyrogram/filters.py", line 79, in __call__
+    y = await self.other(client, update)
+  File "/mnt/c/Users/pc/Desktop/save/Txt V2/savex/plugins/force_subs.py", line 8, in not_subscribed
+    await AshutoshGoswami24.add_user(client, message)
+TypeError: Database.add_user() takes 2 positional arguments but 3 were given
+12-Jun-24 23:33:18 - ERROR - name 'enums' is not defined [dispatcher.py:253]
+Traceback (most recent call last):
+  File "/home/ashu/.local/lib/python3.10/site-packages/pyrogram/dispatcher.py", line 240, in handler_worker
+    await handler.callback(self.client, *args)
+  File "/mnt/c/Users/pc/Desktop/save/Txt V2/savex/plugins/start_&_cb.py", line 76, in cb_handler
+    parse_mode=enums.ParseMode.HTML
+NameError: name 'enums' is not defined
+12-Jun-24 23:33:19 - ERROR - Database.add_user() takes 2 positional arguments but 3 were given [dispatcher.py:229]
+Traceback (most recent call last):
+  File "/home/ashu/.local/lib/python3.10/site-packages/pyrogram/dispatcher.py", line 226, in handler_worker
+    if await handler.check(self.client, parsed_update):
+  File "/home/ashu/.local/lib/python3.10/site-packages/pyromod/listen/listen.py", line 103, in check
+    await self.filters(client, update)
+  File "/home/ashu/.local/lib/python3.10/site-packages/pyrogram/filters.py", line 79, in __call__
+    y = await self.other(client, update)
+  File "/mnt/c/Users/pc/Desktop/save/Txt V2/savex/plugins/force_subs.py", line 8, in not_subscribed
+    await AshutoshGoswami24.add_user(client, message)
+TypeError: Database.add_user() takes 2 positional arguments but 3 were given
+12-Jun-24 23:33:19 - ERROR - Database.add_user() takes 2 positional arguments but 3 were given [dispatcher.py:253]
+Traceback (most recent call last):
+  File "/home/ashu/.local/lib/python3.10/site-packages/pyrogram/dispatcher.py", line 240, in handler_worker
+    await handler.callback(self.client, *args)
+  File "/home/ashu/.local/lib/python3.10/site-packages/pyromod/listen/listen.py", line 93, in resolve_listener
+    await self.user_callback(client, message, *args)
+  File "/mnt/c/Users/pc/Desktop/save/Txt V2/savex/plugins/start_&_cb.py", line 29, in start
+    await AshutoshGoswami24.add_user(client, message)
+TypeError: Database.add_user() takes 2 positional arguments but 3 were given
+12-Jun-24 23:33:21 - ERROR - Database.add_user() takes 2 positional arguments but 3 were given [dispatcher.py:229]
+Traceback (most recent call last):
+  File "/home/ashu/.local/lib/python3.10/site-packages/pyrogram/dispatcher.py", line 226, in handler_worker
+    if await handler.check(self.client, parsed_update):
+  File "/home/ashu/.local/lib/python3.10/site-packages/pyromod/listen/listen.py", line 103, in check
+    await self.filters(client, update)
+  File "/home/ashu/.local/lib/python3.10/site-packages/pyrogram/filters.py", line 79, in __call__
+    y = await self.other(client, update)
+  File "/mnt/c/Users/pc/Desktop/save/Txt V2/savex/plugins/force_subs.py", line 8, in not_subscribed
+    await AshutoshGoswami24.add_user(client, message)
+TypeError: Database.add_user() takes 2 positional arguments but 3 were given
+12-Jun-24 23:33:21 - ERROR - Database.add_user() takes 2 positional arguments but 3 were given [dispatcher.py:253]
+Traceback (most recent call last):
+  File "/home/ashu/.local/lib/python3.10/site-packages/pyrogram/dispatcher.py", line 240, in handler_worker
+    await handler.callback(self.client, *args)
+  File "/home/ashu/.local/lib/python3.10/site-packages/pyromod/listen/listen.py", line 93, in resolve_listener
+    await self.user_callback(client, message, *args)
+  File "/mnt/c/Users/pc/Desktop/save/Txt V2/savex/plugins/start_&_cb.py", line 29, in start
+    await AshutoshGoswami24.add_user(client, message)
+TypeError: Database.add_user() takes 2 positional arguments but 3 were given
+12-Jun-24 23:34:26 - ERROR - Database.add_user() takes 2 positional arguments but 3 were given [dispatcher.py:229]
+Traceback (most recent call last):
+  File "/home/ashu/.local/lib/python3.10/site-packages/pyrogram/dispatcher.py", line 226, in handler_worker
+    if await handler.check(self.client, parsed_update):
+  File "/home/ashu/.local/lib/python3.10/site-packages/pyromod/listen/listen.py", line 103, in check
+    await self.filters(client, update)
+  File "/home/ashu/.local/lib/python3.10/site-packages/pyrogram/filters.py", line 79, in __call__
+    y = await self.other(client, update)
+  File "/mnt/c/Users/pc/Desktop/save/Txt V2/savex/plugins/force_subs.py", line 8, in not_subscribed
+    await AshutoshGoswami24.add_user(client, message)
+TypeError: Database.add_user() takes 2 positional arguments but 3 were given
+12-Jun-24 23:34:28 - ERROR - Database.add_user() takes 2 positional arguments but 3 were given [dispatcher.py:229]
+Traceback (most recent call last):
+  File "/home/ashu/.local/lib/python3.10/site-packages/pyrogram/dispatcher.py", line 226, in handler_worker
+    if await handler.check(self.client, parsed_update):
+  File "/home/ashu/.local/lib/python3.10/site-packages/pyromod/listen/listen.py", line 103, in check
+    await self.filters(client, update)
+  File "/home/ashu/.local/lib/python3.10/site-packages/pyrogram/filters.py", line 79, in __call__
+    y = await self.other(client, update)
+  File "/mnt/c/Users/pc/Desktop/save/Txt V2/savex/plugins/force_subs.py", line 8, in not_subscribed
+    await AshutoshGoswami24.add_user(client, message)
+TypeError: Database.add_user() takes 2 positional arguments but 3 were given
+12-Jun-24 23:36:36 - ERROR - Database.add_user() takes 2 positional arguments but 3 were given [dispatcher.py:229]
+Traceback (most recent call last):
+  File "/home/ashu/.local/lib/python3.10/site-packages/pyrogram/dispatcher.py", line 226, in handler_worker
+    if await handler.check(self.client, parsed_update):
+  File "/home/ashu/.local/lib/python3.10/site-packages/pyromod/listen/listen.py", line 103, in check
+    await self.filters(client, update)
+  File "/home/ashu/.local/lib/python3.10/site-packages/pyrogram/filters.py", line 79, in __call__
+    y = await self.other(client, update)
+  File "/mnt/c/Users/pc/Desktop/save/Txt V2/savex/plugins/force_subs.py", line 8, in not_subscribed
+    await AshutoshGoswami24.add_user(client, message)
+TypeError: Database.add_user() takes 2 positional arguments but 3 were given
+12-Jun-24 23:36:38 - ERROR - Database.add_user() takes 2 positional arguments but 3 were given [dispatcher.py:229]
+Traceback (most recent call last):
+  File "/home/ashu/.local/lib/python3.10/site-packages/pyrogram/dispatcher.py", line 226, in handler_worker
+    if await handler.check(self.client, parsed_update):
+  File "/home/ashu/.local/lib/python3.10/site-packages/pyromod/listen/listen.py", line 103, in check
+    await self.filters(client, update)
+  File "/home/ashu/.local/lib/python3.10/site-packages/pyrogram/filters.py", line 79, in __call__
+    y = await self.other(client, update)
+  File "/mnt/c/Users/pc/Desktop/save/Txt V2/savex/plugins/force_subs.py", line 8, in not_subscribed
+    await AshutoshGoswami24.add_user(client, message)
+TypeError: Database.add_user() takes 2 positional arguments but 3 were given
+12-Jun-24 23:36:43 - ERROR - Database.add_user() takes 2 positional arguments but 3 were given [dispatcher.py:229]
+Traceback (most recent call last):
+  File "/home/ashu/.local/lib/python3.10/site-packages/pyrogram/dispatcher.py", line 226, in handler_worker
+    if await handler.check(self.client, parsed_update):
+  File "/home/ashu/.local/lib/python3.10/site-packages/pyromod/listen/listen.py", line 103, in check
+    await self.filters(client, update)
+  File "/home/ashu/.local/lib/python3.10/site-packages/pyrogram/filters.py", line 79, in __call__
+    y = await self.other(client, update)
+  File "/mnt/c/Users/pc/Desktop/save/Txt V2/savex/plugins/force_subs.py", line 8, in not_subscribed
+    await AshutoshGoswami24.add_user(client, message)
+TypeError: Database.add_user() takes 2 positional arguments but 3 were given
+12-Jun-24 23:36:44 - ERROR - Database.add_user() takes 2 positional arguments but 3 were given [dispatcher.py:229]
+Traceback (most recent call last):
+  File "/home/ashu/.local/lib/python3.10/site-packages/pyrogram/dispatcher.py", line 226, in handler_worker
+    if await handler.check(self.client, parsed_update):
+  File "/home/ashu/.local/lib/python3.10/site-packages/pyromod/listen/listen.py", line 103, in check
+    await self.filters(client, update)
+  File "/home/ashu/.local/lib/python3.10/site-packages/pyrogram/filters.py", line 79, in __call__
+    y = await self.other(client, update)
+  File "/mnt/c/Users/pc/Desktop/save/Txt V2/savex/plugins/force_subs.py", line 8, in not_subscribed
+    await AshutoshGoswami24.add_user(client, message)
+TypeError: Database.add_user() takes 2 positional arguments but 3 were given
+12-Jun-24 23:36:45 - ERROR - Database.add_user() takes 2 positional arguments but 3 were given [dispatcher.py:229]
+Traceback (most recent call last):
+  File "/home/ashu/.local/lib/python3.10/site-packages/pyrogram/dispatcher.py", line 226, in handler_worker
+    if await handler.check(self.client, parsed_update):
+  File "/home/ashu/.local/lib/python3.10/site-packages/pyromod/listen/listen.py", line 103, in check
+    await self.filters(client, update)
+  File "/home/ashu/.local/lib/python3.10/site-packages/pyrogram/filters.py", line 79, in __call__
+    y = await self.other(client, update)
+  File "/mnt/c/Users/pc/Desktop/save/Txt V2/savex/plugins/force_subs.py", line 8, in not_subscribed
+    await AshutoshGoswami24.add_user(client, message)
+TypeError: Database.add_user() takes 2 positional arguments but 3 were given
+12-Jun-24 23:36:47 - ERROR - Database.add_user() takes 2 positional arguments but 3 were given [dispatcher.py:229]
+Traceback (most recent call last):
+  File "/home/ashu/.local/lib/python3.10/site-packages/pyrogram/dispatcher.py", line 226, in handler_worker
+    if await handler.check(self.client, parsed_update):
+  File "/home/ashu/.local/lib/python3.10/site-packages/pyromod/listen/listen.py", line 103, in check
+    await self.filters(client, update)
+  File "/home/ashu/.local/lib/python3.10/site-packages/pyrogram/filters.py", line 79, in __call__
+    y = await self.other(client, update)
+  File "/mnt/c/Users/pc/Desktop/save/Txt V2/savex/plugins/force_subs.py", line 8, in not_subscribed
+    await AshutoshGoswami24.add_user(client, message)
+TypeError: Database.add_user() takes 2 positional arguments but 3 were given
+12-Jun-24 23:36:59 - ERROR - Database.add_user() takes 2 positional arguments but 3 were given [dispatcher.py:229]
+Traceback (most recent call last):
+  File "/home/ashu/.local/lib/python3.10/site-packages/pyrogram/dispatcher.py", line 226, in handler_worker
+    if await handler.check(self.client, parsed_update):
+  File "/home/ashu/.local/lib/python3.10/site-packages/pyromod/listen/listen.py", line 103, in check
+    await self.filters(client, update)
+  File "/home/ashu/.local/lib/python3.10/site-packages/pyrogram/filters.py", line 79, in __call__
+    y = await self.other(client, update)
+  File "/mnt/c/Users/pc/Desktop/save/Txt V2/savex/plugins/force_subs.py", line 8, in not_subscribed
+    await AshutoshGoswami24.add_user(client, message)
+TypeError: Database.add_user() takes 2 positional arguments but 3 were given
+12-Jun-24 23:38:25 - ERROR - Database.add_user() takes 2 positional arguments but 3 were given [dispatcher.py:229]
+Traceback (most recent call last):
+  File "/home/ashu/.local/lib/python3.10/site-packages/pyrogram/dispatcher.py", line 226, in handler_worker
+    if await handler.check(self.client, parsed_update):
+  File "/home/ashu/.local/lib/python3.10/site-packages/pyromod/listen/listen.py", line 103, in check
+    await self.filters(client, update)
+  File "/home/ashu/.local/lib/python3.10/site-packages/pyrogram/filters.py", line 79, in __call__
+    y = await self.other(client, update)
+  File "/mnt/c/Users/pc/Desktop/save/Txt V2/savex/plugins/force_subs.py", line 8, in not_subscribed
+    await AshutoshGoswami24.add_user(client, message)
+TypeError: Database.add_user() takes 2 positional arguments but 3 were given
+12-Jun-24 23:38:30 - ERROR - Database.add_user() takes 2 positional arguments but 3 were given [dispatcher.py:229]
+Traceback (most recent call last):
+  File "/home/ashu/.local/lib/python3.10/site-packages/pyrogram/dispatcher.py", line 226, in handler_worker
+    if await handler.check(self.client, parsed_update):
+  File "/home/ashu/.local/lib/python3.10/site-packages/pyromod/listen/listen.py", line 103, in check
+    await self.filters(client, update)
+  File "/home/ashu/.local/lib/python3.10/site-packages/pyrogram/filters.py", line 79, in __call__
+    y = await self.other(client, update)
+  File "/mnt/c/Users/pc/Desktop/save/Txt V2/savex/plugins/force_subs.py", line 8, in not_subscribed
+    await AshutoshGoswami24.add_user(client, message)
+TypeError: Database.add_user() takes 2 positional arguments but 3 were given
+12-Jun-24 23:38:32 - ERROR - Database.add_user() takes 2 positional arguments but 3 were given [dispatcher.py:229]
+Traceback (most recent call last):
+  File "/home/ashu/.local/lib/python3.10/site-packages/pyrogram/dispatcher.py", line 226, in handler_worker
+    if await handler.check(self.client, parsed_update):
+  File "/home/ashu/.local/lib/python3.10/site-packages/pyromod/listen/listen.py", line 103, in check
+    await self.filters(client, update)
+  File "/home/ashu/.local/lib/python3.10/site-packages/pyrogram/filters.py", line 79, in __call__
+    y = await self.other(client, update)
+  File "/mnt/c/Users/pc/Desktop/save/Txt V2/savex/plugins/force_subs.py", line 8, in not_subscribed
+    await AshutoshGoswami24.add_user(client, message)
+TypeError: Database.add_user() takes 2 positional arguments but 3 were given
+12-Jun-24 23:38:33 - ERROR - Database.add_user() takes 2 positional arguments but 3 were given [dispatcher.py:229]
+Traceback (most recent call last):
+  File "/home/ashu/.local/lib/python3.10/site-packages/pyrogram/dispatcher.py", line 226, in handler_worker
+    if await handler.check(self.client, parsed_update):
+  File "/home/ashu/.local/lib/python3.10/site-packages/pyromod/listen/listen.py", line 103, in check
+    await self.filters(client, update)
+  File "/home/ashu/.local/lib/python3.10/site-packages/pyrogram/filters.py", line 79, in __call__
+    y = await self.other(client, update)
+  File "/mnt/c/Users/pc/Desktop/save/Txt V2/savex/plugins/force_subs.py", line 8, in not_subscribed
+    await AshutoshGoswami24.add_user(client, message)
+TypeError: Database.add_user() takes 2 positional arguments but 3 were given
+12-Jun-24 23:38:33 - ERROR - Database.add_user() takes 2 positional arguments but 3 were given [dispatcher.py:229]
+Traceback (most recent call last):
+  File "/home/ashu/.local/lib/python3.10/site-packages/pyrogram/dispatcher.py", line 226, in handler_worker
+    if await handler.check(self.client, parsed_update):
+  File "/home/ashu/.local/lib/python3.10/site-packages/pyromod/listen/listen.py", line 103, in check
+    await self.filters(client, update)
+  File "/home/ashu/.local/lib/python3.10/site-packages/pyrogram/filters.py", line 79, in __call__
+    y = await self.other(client, update)
+  File "/mnt/c/Users/pc/Desktop/save/Txt V2/savex/plugins/force_subs.py", line 8, in not_subscribed
+    await AshutoshGoswami24.add_user(client, message)
+TypeError: Database.add_user() takes 2 positional arguments but 3 were given
+12-Jun-24 23:39:52 - ERROR - object NoneType can't be used in 'await' expression [dispatcher.py:253]
+Traceback (most recent call last):
+  File "/home/ashu/.local/lib/python3.10/site-packages/pyrogram/dispatcher.py", line 240, in handler_worker
+    await handler.callback(self.client, *args)
+  File "/home/ashu/.local/lib/python3.10/site-packages/pyromod/listen/listen.py", line 93, in resolve_listener
+    await self.user_callback(client, message, *args)
+TypeError: object NoneType can't be used in 'await' expression
+12-Jun-24 23:39:52 - ERROR - object NoneType can't be used in 'await' expression [dispatcher.py:253]
+Traceback (most recent call last):
+  File "/home/ashu/.local/lib/python3.10/site-packages/pyrogram/dispatcher.py", line 240, in handler_worker
+    await handler.callback(self.client, *args)
+  File "/home/ashu/.local/lib/python3.10/site-packages/pyromod/listen/listen.py", line 93, in resolve_listener
+    await self.user_callback(client, message, *args)
+TypeError: object NoneType can't be used in 'await' expression
+12-Jun-24 23:39:53 - ERROR - object NoneType can't be used in 'await' expression [dispatcher.py:253]
+Traceback (most recent call last):
+  File "/home/ashu/.local/lib/python3.10/site-packages/pyrogram/dispatcher.py", line 240, in handler_worker
+    await handler.callback(self.client, *args)
+  File "/home/ashu/.local/lib/python3.10/site-packages/pyromod/listen/listen.py", line 93, in resolve_listener
+    await self.user_callback(client, message, *args)
+TypeError: object NoneType can't be used in 'await' expression

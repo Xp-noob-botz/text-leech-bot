@@ -21,3 +21,7 @@ aiofiles
 pytz
 umongo==3.1.0
 speedtest-cli
+
+psutil
+motor==3.1.2
+dnspython==2.3.0

@@ -1,52 +1,56 @@
 {
-    "name": "𝐓𝐞𝐱𝐭 𝐋𝐞𝐞𝐜𝐡",
-    "description": "𝑻𝒆𝒙𝒕 𝑳𝒆𝒆𝒄𝒉 𝑽𝒊𝒅𝒆𝒐 𝑬𝒙𝒕𝒓𝒂𝒄𝒕𝒐𝒓 𝑭𝒐𝒓 𝑻𝒆𝒍𝒆𝒈𝒓𝒂𝒎",
-    "logo": "https://graph.org/file/895bda0cdfbe06c938bf4.jpg",
-    "keywords": [
-        "text-video",
-        "video-extract",
-        "pyrogram"
-    ],
-    "repository": "https://github.com/animexboy/TxTLchBot",
-    "success_url": "https://t.me/PandaWep",
-    "stack": "container",
+    "name": "Auto Renamer Bot",
+    "description": "Telegram Auto File Renamer Bot ",
+    "logo": "https://graph.org/file/b3125068739885e7109db.jpg",
+    "keywords": ["Auto Renamer Bot", "Mongo DB"],    
+    "repository": "https://github.com/AshutoshGoswami24/Auto-Rename-Bot",
     "env": {
         "API_ID": {
-            "description": "𝑬𝒏𝒕𝒆𝒓 𝒀𝒐𝒖𝒓 𝑨𝒑𝒊 𝑰𝑫",
-            "required": true
+            "description": "Your APP ID From my.telegram.org ",
+            "value": ""
         },
         "API_HASH": {
-            "description": "𝑬𝒏𝒕𝒆𝒓 𝒀𝒐𝒖𝒓 𝑨𝒑𝒊 𝑯𝒂𝒔𝒉",
-            "required": true
+            "description": "Your API Hash From my.telegram.org ",
+            "value": ""
+        },
+        "WEBHOOK": {
+            "description": "if your server is need web service! value = True else value = False",
+            "value": "False"
+        },
+        "FORCE_SUB": {
+            "description": "Your force sub channel user name without [@] ",
+            "value": "",
+            "required": false 
         },
         "BOT_TOKEN": {
-            "description": "𝑬𝒏𝒕𝒆𝒓 𝒀𝒐𝒖𝒓 𝑩𝒐𝒕 𝑻𝒐𝒌𝒆𝒏",
-            "required": true
+            "description": "Your Bot Token From @BotFather",
+            "value": ""
         },
-        "OWNER_ID": {
-            "description": "𝑼𝒔𝒆𝒓 𝑰𝑫 𝑶𝒇 𝑩𝒐𝒕 𝑶𝒘𝒏𝒆𝒓",
-            "required": true
+        "ADMIN": {
+            "description":"Add Your User ID multiple is use space to split"
         },
-        "SUDO_USERS": {
-            "description": "𝑺𝒖𝒅𝒐 𝑰𝑫'𝒔 (𝒀𝒐𝒖 𝑪𝒂𝒏 𝑨𝒅𝒅 𝑴𝒖𝒍𝒕𝒊𝒑𝒍𝒆 𝑩𝒚 𝑮𝒊𝒗𝒊𝒏𝒈 𝑺𝒑𝒂𝒄𝒆)",
-            "required": true
+        "LOG_CHANNEL": {
+            "description":"Bot Log Sending Channel (just create a private channel and add bot to admin and take channel id to add this variable) ⚠️ id startswith -100 must",
+            "required": false           
         },
-        "QRPICS": {
-            "description": "𝑼𝒔𝒆𝒓 𝑰𝑫 𝑶𝒇 𝑩𝒐𝒕 𝑶𝒘𝒏𝒆𝒓",
-            "required": true
+        "DB_URL": {
+            "description": "Your Mongo DB URL Obtained From mongodb.com",
+            "value": ""
         },
-        "PICS": {
-            "description": "𝑼𝒔𝒆𝒓 𝑰𝑫 𝑶𝒇 𝑩𝒐𝒕 𝑶𝒘𝒏𝒆𝒓",
-            "required": true
+        "DB_NAME":{ 
+            "description":"Your Mongo DB Database Name ",
+            "value": "",
+            "required": false
+        },
+        "START_PIC": {
+            "description": "Your Bot start cmd Pic from @MT_TelegraPH_Bot",
+            "value": "",
+            "required": false
         }
     },
-    "addons": [],
     "buildpacks": [
         {
             "url": "heroku/python"
-        },
-        {
-            "url": "https://github.com/AshutoshGoswami24/Ashutosh-Goswami-heroku-buildpack-ffmpeg-latest.git"
         }
     ]
 }
