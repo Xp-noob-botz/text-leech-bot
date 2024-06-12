@@ -1,17 +1,12 @@
-<img src="https://graph.org/file/9bf9479159d2036843976.jpg" alt="logo" target="/blank">
+<img src="res/image.png" alt="logo" target="/blank">
 
 <h1 align="center">
- <b><a href="https://t.me/AutoRenamePro_bot" target="/blank"> Auto Rename Bot </a></>
+ <b><a href="https://t.me/TxTUploderRoBot" target="/blank">TxT Uploder</a></>
 
 </h1>
 
-<p align="center">🤍 Thanks for Being Here 🤍</p>
-
-<p align="center"> 🅡🅔🅟🅞 🅢🅣🅐🅣🅢 </p>
 
 
-![github card](https://github-readme-stats.vercel.app/api/pin/?username=AshutoshGoswami24&repo=Auto-Rename-Bot&theme=dark)
-### ⚡️ Configs 
 
 * `BOT_TOKEN`  - Get bot token from @BotFather
 
@@ -33,61 +28,23 @@
 
 * `WEBHOOK` - If your server is need web service! value = True else value = False. `Optional`
 
-  ### 📶 DEPLOYEMENT SUPPORT
 
-<details><summary>Deploy To Koyeb</summary>
-<p>
-<br>                 
-<a target="/blank" href="https://app.koyeb.com/deploy?type=git&repository=github.com/AshutoshGoswami24/Auto-Rename-Bot&branch=main&name=PandaXAshu" >
-  <img src="https://www.koyeb.com/static/images/deploy/button.svg" alt="Deploy">
-</a>
-</p>
-</details>
-
-<details><summary>Deploy To Heroku</summary>
-<p>
-<br>
-<a href="https://heroku.com/deploy?template=https://github.com/AshutoshGoswami24/Auto-Rename-Bot">
-  <img src="https://www.herokucdn.com/deploy/button.svg" alt="Deploy">
-</a>
-</p>
-</details>
-
-
-
-
-
-#### 🥰 Features
- - Renames very fast .
- - Permanent Thumbnail support.
- - Force join for the user for use.
- - Supports Broadcasts.
- - Set custom caption.
- - Has a custom Start-up pic.
- - Force subscribe available.
- - Supports ulimited renaming at a time.
- - Deploy to Koyeb + Heroku + Railway.
- - Automatically rename your files
- - Set mediatype to upload filetype
- - Developer Service 24x7. 🔥
 
 
 
 ### 🚦 User Commands
 ```
 start - Check if the bot is running.
-autorename - To auto rename your files.
-tutorial - SETUP AUTO RENAME FORMAT 
-setmedia - To set your media type preference.
-start - To know how to use me.
-viewthumb - To view current thumbnail.
-delthumb - To delete current thumbnail.
-set_caption - set a custom caption.
-see_caption - see your custom caption.
-del_caption - delete custom caption.
-restart - To restart the bot [FOR ADMINS USE ONLY]
-broadcast - Message Broadcast command [FOR ADMINS USE ONLY].
-status - Check bot status [FOR ADMINS USE ONLY].
+plan - Check plans.
+donate - How you can buy Prime.
+upload - To upload text to video or PDF (only for auto users or Prime users).
+restart - To restart the bot (FOR ADMINS USE ONLY).
+add_prime - To add a Prime user <user id> 1d 1m 1y (FOR ADMINS USE ONLY).
+del_prime - To delete a Prime user <user id> (FOR ADMINS USE ONLY).
+show_prime_user - To show all Prime users (FOR ADMINS USE ONLY).
+broadcast - Message broadcast command (FOR ADMINS USE ONLY).
+stop - To stop or restart (FOR ADMINS USE ONLY).
+status - Check bot status (FOR ADMINS USE ONLY).
 ```
 
 
