@@ -211,10 +211,17 @@ async def restart_handler(_, m):
     await m.reply_text("**Bot has been stopped.**", True)
     os.execl(sys.executable, sys.executable, *sys.argv)
 
-# Define your sorry message and help link for users who are not authenticated
-@Client.on_message(~filters.user(AUTH_USERS))
+# # Define your sorry message and help link for users who are not authenticated
+# @Client.on_message(~filters.user(AUTH_USERS))
+# async def unauthorized_user(bot, message):
+#     sorry_message = (
+#        """If you need to buy a prime membership, pay and send a screenshot to <a href="https://t.me/AshuXRobot">Ashu Robot</a>."""
+#     )
+#     await message.reply_text(sorry_message, disable_web_page_preview=True)
+
+@Client.on_message(~filters.user(AUTH_USERS) & ~filters.chat(AUTH_CHANNELS))
 async def unauthorized_user(bot, message):
     sorry_message = (
-       """If you need to buy a prime membership, pay and send a screenshot to <a href="https://t.me/AshuXRobot">Ashu Robot</a>."""
+        """If you need to buy a prime membership, pay and send a screenshot to <a href="https://t.me/AshuXRobot">Ashu Robot</a>. /plan /donate"""
     )
     await message.reply_text(sorry_message, disable_web_page_preview=True)
