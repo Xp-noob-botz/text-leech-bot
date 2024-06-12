@@ -13,7 +13,7 @@ from os import getenv, environ
 # BOT_TOKEN = environ.get("BOT_TOKEN", "7126726584:AAEvsulTILtDO44lctlzDDYTGGvwL5oXQU0")
 
 
-AUTH_USERS = [7062828064, 6679365516]
+AUTH_USERS = [7062828064, 6679365516, 7375364794]
 AUTH_CHANNELS = [-1002188153245, -1002116868480]
 #img
 QRPICS = (environ.get('QRPICS', 'https://graph.org/file/867866ae66f1d42413c71.jpg https://graph.org/file/867866ae66f1d42413c71.jpg')).split()
@@ -107,7 +107,7 @@ class Config(object):
     # pyro client config
     API_ID    = os.environ.get("API_ID", "29917436")
     API_HASH  = os.environ.get("API_HASH", "4a926822b076a086a167fe8f2701d3e9")
-    BOT_TOKEN = os.environ.get("BOT_TOKEN", "6679365516:AAGoEnedgIQCI0WBcJQd3X4X35yipFeNLxo") 
+    BOT_TOKEN = os.environ.get("BOT_TOKEN", "7375364794:AAGJp8cXwlotAqTfKHTg1BjENnde73GIToA") 
 
     # database config
     DB_NAME = os.environ.get("DB_NAME","AshutoshGoswami24")     
