@@ -14,7 +14,7 @@ from os import getenv, environ
 
 
 AUTH_USERS = [7062828064, 6679365516]
-
+AUTH_CHANNELS = [-1002188153245, -1002116868480]
 #img
 QRPICS = (environ.get('QRPICS', 'https://graph.org/file/867866ae66f1d42413c71.jpg https://graph.org/file/867866ae66f1d42413c71.jpg')).split()
 
