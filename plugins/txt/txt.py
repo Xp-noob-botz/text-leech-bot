@@ -262,7 +262,7 @@ async def account_login(client: Client, message: Message):
                     ka = await helper.download(url, name)
                     cc = f'**[ 🎥 ] Vid_ID:** {str(count).zfill(3)}. {name1}{MR}.mkv\n✉️ 𝐁𝐚𝐭𝐜𝐡 » **{raw_text0}**'
                     copy = await client.send_document(chat_id=message.chat.id, document=ka, caption=cc)
-                                        count += 1
+                    count += 1
                     os.remove(ka)
                     time.sleep(1)
                 
