@@ -149,70 +149,87 @@ async def is_prime_user_filter(_, __, message: Message):
 
 prime_user_filter = filters.create(is_prime_user_filter)
 
-# Define your command handler for authenticated users
 @Client.on_message(filters.command(["upload"]) & (filters.user(AUTH_USERS) | prime_user_filter))
-async def account_login(client: Client, message: Message):
+async def account_login(bot: Client, m: Message):
+    editable = await m.reply_text('Downloading Text File Sent Here ⏍')
+    input_msg: Message = await bot.listen(editable.chat.id)
+    x = await input_msg.download()
+    await input_msg.delete(True)
+
+    path = f"./downloads/{m.chat.id}/"
+
     try:
-        editable = await message.reply_text('𝐓𝐨 𝐃𝐨𝐰𝐧𝐥𝐨𝐚𝐝 𝐀 𝐓𝐱𝐭 𝐅𝐢𝐥𝐞 𝐒𝐞𝐧𝐝 𝐇𝐞𝐫𝐞 ⏍')
-        input_message = await client.listen(editable.chat.id)
-        x = await input_message.download()
-        await input_message.delete(True)
-
-        path = f"./downloads/{message.chat.id}/"
-
         with open(x, "r") as f:
             content = f.read()
         content = content.split("\n")
-        links = [i.split("://", 1) for i in content]
+        links = []
+        for i in content:
+            links.append(i.split("://", 1))
         os.remove(x)
+    except Exception as e:
+        await m.reply_text("Invalid file input.")
+        os.remove(x)
+        return
 
-        await editable.edit(f"∝ 𝐓𝐨𝐭𝐚𝐥 𝐋𝐢𝐧𝐤 𝐅𝐨𝐮𝐧𝐝 𝐀𝐫𝐞 🔗 **{len(links)}**\n\n𝐒𝐞𝐧𝐝 𝐅𝐫𝐨𝐦 𝐖𝐡𝐞𝐫𝐞 𝐘𝐨𝐮 𝐖𝐚𝐧𝐭 𝐓𝐨 𝐃𝐨𝐰𝐧𝐥𝐨𝐚𝐝 𝐈𝐧𝐢𝐭𝐚𝐥 𝐢𝐬 **1**")
-        input0 = await client.listen(editable.chat.id)
-        raw_text = input0.text
-        await input0.delete(True)
+    await editable.edit(f"Total Links Found Are 🔗 **{len(links)}**\n\nSend Number From Where You Want To Download Initial **1**")
+    input0: Message = await bot.listen(editable.chat.id)
+    raw_text = input0.text
+    await input0.delete(True)
 
-        await editable.edit("∝ 𝐍𝐨𝐰 𝐏𝐥𝐞𝐚𝐬𝐞 𝐒𝐞𝐧𝐝 𝐌𝐞 𝐘𝐨𝐮𝐫 𝐁𝐚𝐭𝐜𝐡 𝐍𝐚𝐦𝐞")
-        input1 = await client.listen(editable.chat.id)
-        raw_text0 = input1.text
-        await input1.delete(True)
+    await editable.edit("📜 Now Please Provide The Name")
+    input1: Message = await bot.listen(editable.chat.id)
+    raw_text0 = input1.text
+    await input1.delete(True)
 
-        await editable.edit("∝ 𝐄𝐧𝐭𝐞𝐫 𝐑𝐞𝐬𝐨𝐥𝐮𝐭𝐢𝐨𝐧 🎬\n☞ 144, 240, 360, 480, 720, 1080\nPlease Choose Quality\n**@AshutoshGoswami24 @PandaWep**")
-        input2 = await client.listen(editable.chat.id)
-        raw_text2 = input2.text
-        await input2.delete(True)
+    await editable.edit("🎥 Now Enter The Desired Resolution 📹 Eg. 144, 240, 360, 480, 720, 1080")
+    input2: Message = await bot.listen(editable.chat.id)
+    raw_text2 = input2.text
+    await input2.delete(True)
 
-        res = {
-            "144": "256x144",
-            "240": "426x240",
-            "360": "640x360",
-            "480": "854x480",
-            "720": "1280x720",
-            "1080": "1920x1080"
-        }.get(raw_text2, "UN")
-
-        await editable.edit("✏️ Now Enter A Caption to add caption on your uploaded file")
-        input3 = await client.listen(editable.chat.id)
-        raw_text3 = input3.text
-        await input3.delete(True)
-
-        MR = "️ ⁪⁬⁮⁮⁮" if raw_text3 == 'Robin' else raw_text3
-
-        await editable.edit("🌄 Now send the Thumb url\nEg » \n\n Or if don't want thumbnail send = no")
-        input6 = await client.listen(editable.chat.id)
-        raw_text6 = input6.text
-        await input6.delete(True)
-        await editable.delete()
-
-        thumb = "thumb.jpg" if raw_text6.startswith("http://") or raw_text6.startswith("https://") else "no"
-
-        if len(links) == 1:
-            count = 1
+    try:
+        if raw_text2 == "144":
+            res = "256x144"
+        elif raw_text2 == "240":
+            res = "426x240"
+        elif raw_text2 == "360":
+            res = "640x360"
+        elif raw_text2 == "480":
+            res = "854x480"
+        elif raw_text2 == "720":
+            res = "1280x720"
+        elif raw_text2 == "1080":
+            res = "1920x1080"
         else:
-            count = int(raw_text)
+            res = "UN"
+    except Exception:
+        res = "UN"
 
+    await editable.edit("📝 Please Enter A Caption For Your Uploaded File")
+    input3: Message = await bot.listen(editable.chat.id)
+    raw_text3 = input3.text
+    await input3.delete(True)
+
+    await editable.edit("🌄 Now Send The Thumbnail URL\nEg. Or send 'no' if you don't want a thumbnail")
+    input6: Message = await bot.listen(editable.chat.id)
+    raw_text6 = input6.text
+    await input6.delete(True)
+    await editable.delete()
+
+    thumb = raw_text6
+    if thumb.startswith("http://") or thumb.startswith("https://"):
+        getstatusoutput(f"wget '{thumb}' -O 'thumb.jpg'")
+        thumb = "thumb.jpg"
+    else:
+        thumb = "no"
+
+    if len(links) == 1:
+        count = 1
+    else:
+        count = int(raw_text)
+
+    try:
         for i in range(count - 1, len(links)):
-            V = links[i][1].replace("file/d/", "uc?export=download&id=").replace("www.youtube-nocookie.com/embed", "youtu.be").replace("?modestbranding=1", "").replace("/view?usp=sharing", "")
-            url = "https://" + V
+            url = links[i][1].replace("file/d/", "uc?export=download&id=").replace("www.youtube-nocookie.com/embed", "youtu.be").replace("?modestbranding=1", "").replace("/view?usp=sharing", "")
 
             if "visionias" in url:
                 async with ClientSession() as session:
@@ -258,45 +275,52 @@ async def account_login(client: Client, message: Message):
                 cmd = f'yt-dlp -f "{ytf}" "{url}" -o "{name}.mp4"'
 
             try:
+                cc = f'**[ 🎥 ] Video_ID:** {str(count).zfill(3)}.** {name1}{MR}.mkv\n✉️ 𝐁𝐚𝐭𝐜𝐡 » **{raw_text0}**'
+                cc1= f'**[ 📁 ] Pdf_ID:** {str(count).zfill(3)}. {name1}{MR}.pdf \n✉️ 𝐁𝐚𝐭𝐜𝐡 » **{raw_text0}**'
                 if "drive" in url:
-                    ka = await helper.download(url, name)
-                    cc = f'**[ 🎥 ] Vid_ID:** {str(count).zfill(3)}. {name1}{MR}.mkv\n✉️ 𝐁𝐚𝐭𝐜𝐡 » **{raw_text0}**'
-                    copy = await client.send_document(chat_id=message.chat.id, document=ka, caption=cc)
-                    count += 1
-                    os.remove(ka)
-                    time.sleep(1)
-                
-                elif ".pdf" in url:
-                    cmd = f'yt-dlp -o "{name}.pdf" "{url}"'
-                    download_cmd = f"{cmd} -R 25 --fragment-retries 25"
-                    os.system(download_cmd)
-                    cc = f'**[ 📁 ] Pdf_ID:** {str(count).zfill(3)}. {name1}{MR}.pdf \n✉️ 𝐁𝐚𝐭𝐜𝐡 » **{raw_text0}**'
-                    copy = await client.send_document(chat_id=message.chat.id, document=f'{name}.pdf', caption=cc)
-                    count += 1
-                    os.remove(f'{name}.pdf')
+                    try:
+                        ka = await helper.download(url, name)
+                        copy = await bot.send_document(chat_id=m.chat.id, document=ka, caption=cc1)
+                        count += 1
+                        os.remove(ka)
+                        time.sleep(1)
+                    except FloodWait as e:
+                        await m.reply_text(str(e))
+                        time.sleep(e.x)
+                        continue
 
+                elif ".pdf" in url:
+                    try:
+                        cmd = f'yt-dlp -o "{name}.pdf" "{url}"'
+                        download_cmd = f"{cmd} -R 25 --fragment-retries 25"
+                        os.system(download_cmd)
+                        copy = await bot.send_document(chat_id=m.chat.id, document=f'{name}.pdf', caption=cc1)
+                        count += 1
+                        os.remove(f'{name}.pdf')
+                    except FloodWait as e:
+                        await m.reply_text(str(e))
+                        time.sleep(e.x)
                 else:
-                    Show = f"❊⟱𝐃𝐨𝐰𝐧𝐥𝐨𝐚𝐝𝐢𝐧𝐠 ⟱❊ »\n\n📝 𝐍𝐚𝐦𝐞 » `{name}\n⌨ 𝐐𝐮𝐚𝐥𝐢𝐭𝐲 » {raw_text2}`\n\n**🔗 𝐔𝐑𝐋 »** `{url}`"
-                    prog = await message.reply_text(Show)
+                    Show = f"❊⟱Downloading ⟱»\n\n📝 𝐍𝐚𝐦𝐞 » `{name}\n⌨ 𝐐𝐮𝐚𝐥𝐢𝐭𝐲 » {raw_text2}`\n\n**🔗 𝐔𝐑𝐋 »** `{url}`"
+                    prog = await m.reply_text(Show)
                     res_file = await helper.download_video(url, cmd, name)
                     filename = res_file
                     await prog.delete(True)
-                    
-                    cc = f'**[ 🎥 ] Vid_ID:** {str(count).zfill(3)}. {name1}{MR}.mkv\n✉️ 𝐁𝐚𝐭𝐜𝐡 » **{raw_text0}**'
-                    await helper.send_vid(client, message, cc, filename, thumb, name, prog)
+                    await helper.send_vid(bot, m, cc, filename, thumb, name, prog)
                     count += 1
                     time.sleep(1)
 
             except Exception as e:
-                await message.reply_text(
+                await m.reply_text(
                     f"⌘ 𝐃𝐨𝐰𝐧𝐥𝐨𝐚𝐝𝐢𝐧𝐠 𝐈𝐧𝐭𝐞𝐫𝐫𝐮𝐩𝐭𝐞𝐝\n{str(e)}\n⌘ 𝐍𝐚𝐦𝐞 » {name}\n⌘ 𝐋𝐢𝐧𝐤 » `{url}`"
                 )
                 continue
 
     except Exception as e:
-        await message.reply_text(str(e))
+        await m.reply_text(str(e))
 
-    await message.reply_text("𝐒𝐮𝐜𝐜𝐞𝐬𝐬𝐟𝐮𝐥𝐥𝐲 𝐃𝐨𝐧𝐞 @AshutoshGoswami24 @PandaWep")
+    await m.reply_text("Successfully Done")
+
 
 # Define your command handler for stopping the bot
 @Client.on_message(filters.command("stop") & (filters.user(AUTH_USERS)))
