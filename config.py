@@ -81,7 +81,7 @@ I am a Telegram bot for students to download TXT files with video compression. C
 PRIME_TXT = """
 <b>
 1) Scan the code
-2) Pay 20₹ and take a screenshot
+2) Pay 400₹ and take a screenshot
 3) Send the screenshot to him: <a href="https://t.me/AshuXRobot">Ashu Robot</a>
 4) Wait for a maximum of 1 day,
 5) Then use the bot
@@ -91,7 +91,7 @@ PRIME_TXT = """
 🛍 𝗨𝗣𝗜 𝗜𝗗: <code>PandaWep@ybl</code></b>
 <b>
 1) कोड स्कैन करें
-2) 20₹ देकर एक स्क्रीनशॉट लें
+2) 40₹ देकर एक स्क्रीनशॉट लें
 3) स्क्रीनशॉट को इसके पास भेजें: <a href="https://t.me/AshuXRobot">Ashu Robot</a>
 4) अधिकतम 1 दिन इंतजार करें,
 5) फिर Bot उपयोग करें
@@ -107,7 +107,7 @@ class Config(object):
     # pyro client config
     API_ID    = os.environ.get("API_ID", "29917436")
     API_HASH  = os.environ.get("API_HASH", "4a926822b076a086a167fe8f2701d3e9")
-    BOT_TOKEN = os.environ.get("BOT_TOKEN", "7375364794:AAG2f-gnqJLuWTiT5hMzZr-9lOWqpkSbw2g") 
+    BOT_TOKEN = os.environ.get("BOT_TOKEN", "7375364794:AAEYHxXSx6tBlbirML_OZFvnKQOlG_h4www") 
 
     # database config
     DB_NAME = os.environ.get("DB_NAME","AshutoshGoswami24")     
@@ -119,7 +119,7 @@ class Config(object):
     ADMIN       = [int(admin) if id_pattern.search(admin) else admin for admin in os.environ.get('ADMIN', '7062828064').split()]
     FORCE_SUB   = os.environ.get("FORCE_SUB", "AshutoshGoswami24") 
     LOG_CHANNEL = int(os.environ.get("LOG_CHANNEL", "-1002188153245"))
-    PORT = int(os.environ.get("PORT", ""))
+    PORT = int(os.environ.get("PORT", "8899"))
     
     # wes response configuration     
     WEBHOOK = bool(os.environ.get("WEBHOOK", "True"))
